@@ -1,0 +1,3608 @@
+<!DOCTYPE html>
+<html lang="pt">
+ 
+<head>
+    <meta charSet="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="next-size-adjust" content="" />
+    <title>ZSensi</title>
+   <!-- Link para o manifesto do aplicativo web -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Ícone da tela inicial -->
+    <link rel="apple-touch-icon" href="https://www.zsensi.xyz/images/logo.png">
+    <!-- Ícone do navegador -->
+    <link rel="icon" type="image/png" href="https://www.zsensi.xyz/images/logo.png">
+    <!-- Configurações específicas para iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Zsensi">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#020203"> 
+    <meta name="keywords" content="online storage, free storage, cloud Storage, collaboration, backup file Sharing, share Files, photo backup, photo sharing, ftp replacement, cross platform, remote access, mobile access, send large files, recover files, file versioning, undelete, Windows, PC, Mac, OS X, Linux, iPhone, iPad, Android"/>
+    <meta name="description" content="MediaFire is a simple to use free service that lets you put all your photos, documents, music, and video in a single place so you can access them anywhere and share them everywhere."/>
+    <meta name="robots" content="noindex,nofollow"/>
+    <meta name="googlebot" content="noindex,nofollow"/>
+    <meta name="slurp" content="noindex,nofollow"/>
+    <meta name="google-translate-customization" content="5587c1b0a958bf07-62a8e309de686e87-gc92f61279a2c8524-11"/>
+        <meta property="fb:app_id" content="124578887583575">
+        <script type="text/javascript">
+    <link rel="stylesheet" href="style.css">
+    <script src="particles.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <script src="https://www.zsensi.xyz/_next/static/chunks/4bd1b696-48b84a07be6eb9cc.js"></script>
+    <script src="https://www.zsensi.xyz/_next/static/chunks/684-9658b9fc95b65263.js"></script>
+    <script src="https://www.zsensi.xyz/_next/static/chunks/main-app-70f3fd67bd0c0bda.js"></script>
+    <script src="https://www.zsensi.xyz/_next/static/chunks/607-168afa99f0d4cf77.js"></script>
+    <script src="https://www.zsensi.xyz/_next/static/chunks/41-822c16d8dc3dd5f2.js"></script>
+    <link rel="stylesheet" href="https://auxilioluxecheats.netlify.app/dexter/style.css">
+    <link rel="stylesheet" href="https://www.zsensi.xyz/_next/static/css/f73eceab1ae48b25.css">
+   <script src="https://www.zsensi.xyz/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script>
+</head>  
+    <style>
+   
+        body {
+            background-color: black;
+            color: white;
+            margin: 100;
+            overflow: hidden;
+            touch-action: none;
+        }
+ 
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+ 
+        .inject-container {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+ 
+        #injectButton {
+            width: 100%;
+            padding: 6px;
+            background-color: #020203;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+        }
+ 
+        #injectButton:hover {
+            background-color: #020203;
+        }
+        
+        #injectButton:hover {
+            background-color: #020203;
+        }
+        
+        background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+    .menu {
+     background: #151515;
+    color: white;
+    padding: 100px;
+    border-radius: 50px;
+    width: 900px;
+    box-shadow: 0 0 30px rgba(300, 0, 300, 0.5);
+    text-align: center;
+}
+
+.menu-title {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+hr {
+    border: none;
+    height: 100px;
+    background: #9400D3;
+    margin-bottom: 10px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    flex: 1;
+    background: #222;
+    padding: 8px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.tab.active {
+    background: #020203;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.checkbox input:checked + .checkmark {
+    background: #f2f5f7;
+    color: white;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.slider {
+    width: 90%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #333;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #9400D3;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.combobox {
+    width: 100%;
+    padding: 30px;
+    background: #222;
+    color: white;
+    border: 20px solid #9400D3;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio input {
+    display: none;
+}
+
+.radio-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #333;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio input:checked + .radio-mark {
+    background: #9400D3;
+}
+
+.separator {
+    height: 1px;
+    background: #020203;
+    margin: 10px 0;
+}
+
+    </style>
+    <style>
+       *,
+        :root {
+            --accent: ;
+            --accent-foreground: ;
+            --background: ;
+            --borde: ;
+            --card: ;
+            --card-foreground: ;
+            --chart-1: ;
+            --chart-2: ;
+            --chart-3: ;
+            --chart-4: ;
+            --chart-5: ;
+            --destructive: ;
+            --destructive-foreground: ;
+            --foreground: ;
+            --input: ;
+            --muted: ;
+            --muted-foreground: ;
+            --popover: ;
+            --popover-foreground: ;
+            --primary: ;
+            --primary-foreground: ;
+            --radius: ;
+            --ring: ;
+            --secondary: ;
+            --secondary-foreground: ;
+            --sidebar: ;
+            --sidebar-accent: ;
+            --sidebar-accent-foreground: ;
+            --sidebar-borde: ;
+            --sidebar-foreground: ;
+            --sidebar-primary: ;
+            --sidebar-primary-foreground: ;
+            --sideba-ring: ;
+        }
+ 
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style:
+        }
+ 
+        /* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e5e7eb
+        }
+ 
+        ::after,
+        ::before {
+            --tw-content: ''
+        }
+ 
+        :host,
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
+            tab-size: 4;
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            -webkit-tap-highlight-color: transparent
+        }
+ 
+        body {
+            margin: 0;
+            line-height: inherit
+        }
+ 
+        hr {
+            height: 0;
+            color: inherit;
+            border-top-width: 1px
+        }
+ 
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted
+        }
+ 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit
+        }
+ 
+        a {
+            color: inherit;
+            text-decoration: inherit
+        }
+ 
+        b,
+        strong {
+            font-weight: bolder
+        }
+ 
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            font-size: 1em
+        }
+ 
+        small {
+            font-size: 80%
+        }
+ 
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+ 
+        sub {
+            bottom: -.25em
+        }
+ 
+        sup {
+            top: -.5em
+        }
+ 
+        table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse
+        }
+ 
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-feature-settings: inherit;
+            font-variation-settings: inherit;
+            font-size: 100%;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+            color: inherit;
+            margin: 0;
+            padding: 0
+        }
+ 
+        button,
+        select {
+            text-transform: none
+        }
+ 
+        button,
+        input:where([type=button]),
+        input:where([type=reset]),
+        input:where([type=submit]) {
+            -webkit-appearance: button;
+            background-color: transparent;
+            background-image: none
+        }
+ 
+        :-moz-focusring {
+            outline: auto
+        }
+ 
+        :-moz-ui-invalid {
+            box-shadow: none
+        }
+ 
+        progress {
+            vertical-align: baseline
+        }
+ 
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto
+        }
+ 
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+ 
+        ::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+ 
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+ 
+        summary {
+            display: list-item
+        }
+ 
+        blockquote,
+        dd,
+        dl,
+        figure,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        pre {
+            margin: 0
+        }
+ 
+        fieldset {
+            margin: 0;
+            padding: 0
+        }
+ 
+        legend {
+            padding: 0
+        }
+ 
+        menu,
+        ol,
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+ 
+        dialog {
+            padding: 0
+        }
+ 
+        textarea {
+            resize: vertical
+        }
+ 
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            color: #9ca3af
+        }
+ 
+        [role=button],
+        button {
+            cursor: pointer
+        }
+ 
+        :disabled {
+            cursor: default
+        }
+ 
+        audio,
+        canvas,
+        embed,
+        iframe,
+        img,
+        object,
+        svg,
+        video {
+            display: block;
+            vertical-align: middle
+        }
+ 
+        img,
+        video {
+            max-width: 100%;
+            height: auto
+        }
+ 
+        [hidden]:where(:not([hidden=until-found])) {
+            display: none
+        }
+ 
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto
+        }
+ 
+        .mb-4 {
+            margin-bottom: 1rem
+        }
+ 
+        .mt-6 {
+            margin-top: 1.5rem
+        }
+ 
+        .flex {
+            display: flex
+        }
+ 
+        .h-5 {
+            height: 1.25rem
+        }
+ 
+        .w-5 {
+            width: 1.25rem
+        }
+ 
+        .w-full {
+            width: 100%
+        }
+ 
+        .max-w-md {
+            max-width: 28rem
+        }
+ 
+        .items-center {
+            align-items: center
+        }
+ 
+        .justify-between {
+            justify-content: space-between
+        }
+ 
+        .space-y-4> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(1rem * var(--tw-space-y-reverse))
+        }
+ 
+        .rounded-lg {
+            border-radius: 0.5rem
+        }
+ 
+        .bg-gray-800 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1))
+        }
+ 
+        .bg-gray-900 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1))
+        }
+ 
+        .bg-white {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+        }
+ 
+        .p-4 {
+            padding: 1rem
+        }
+ 
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem
+        }
+ 
+        .font-sans {
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+        }
+ 
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem
+        }
+ 
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem
+        }
+ 
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem
+        }
+ 
+        .font-semibold {
+            font-weight: 600
+        }
+ 
+        .text-gray-300 {
+            --tw-text-opacity: 1;
+            color: rgb(209 213 219 / var(--tw-text-opacity, 1))
+        }
+ 
+        .text-gray-900 {
+            --tw-text-opacity: 1;
+            color: rgb(17 24 39 / var(--tw-text-opacity, 1))
+        }
+ 
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id="particles-js"></div>
+    <div class="menu-container">
+        <div class="menu">
+            <div class="menu-title">Auxilio / @SIELZADA
+                <hr>
+                      <div class="menu-title">configure o Auxilio para usar
+                     <hr>
+                     <div class="separator"></div>                                     
+                    </div>
+            </div>
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('aimbot')">Aimbot</button>
+                <button class="tab" onclick="showTab('info')">Info</button>
+            </div>
+            <div class="content" id="content">
+                <div id="aimbotTab">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">✔</span>
+                        Calibrar sensibilidade
+                    </label>
+                    <div class="content" id="content">
+                <div id="aimbotTab">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">✔</span>
+                        Reduzir recuo
+                    </label>
+                    <div class="content" id="content">
+                <div id="aimbotTab">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">✔</span>
+                        Aumentar precisão
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark">✔</span>
+                        Retirar input lag
+                    </label>
+                   <div class="separator"></div>                                     
+                    </div>
+                    <div class="inject-container">
+                  <button id="injectButton" onclick="injectFunctions()">Injetar</button>
+              </div>
+        <div class="inject-container">
+            <button id="injectButton" onclick="injectFunctions()">Sair</button>                    
+                </div>
+                <div id="infoTab" style="display: none; text-align: left;">
+                    <p><strong>Modelo:</strong> <span id="deviceModel"></span></p>
+                    <p><strong>Key:</strong> luxecheats-dias-auxilio</p>
+                    <h1>
+                    <p><strong>Dicas:</strong> Ative Funções no Treinamento.</p>
+                </div>
+                </div>
+          </div>
+       </div>
+      <!--$-->
+<!--/$-->
+ <!--$-->
+<!--↔-->
+<script src="/_next/static/chunks/webpack-2c8bbbbac631f236.js" async=""></script><script>
+  </script>
+   <script>
+       self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[7555,[],\"\"]\n3:I[1295,[],\"\"]\n4:I[9665,[],\"MetadataBoundary\"]\n9:I[9665,[],\"OutletBoundary\"]\nc:I[4911,[],\"AsyncMetadataOutlet\"]\ne:I[9665,[],\"ViewportBoundary\"]\n10:I[6614,[],\"\"]\n11:\"$Sreact.suspense\"\n12:I[4911,[],\"AsyncMetadata\"]\n:HL[\"/_next/static/media/569ce4b8f30dc480-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/f73eceab1ae48b25.css\",\"style\"]\n"])
+    </script>
+    <script>
+        self.__next_f.push([1,"0:{\"P\":null,\"b\":\"eJNOxXeDYrc8vJpqqfDmz\",\"p\":\"\",\"c\":[\"\",\"\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"(public)\",{\"children\":[\"(home)\",{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/f73eceab1ae48b25.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"bg-background dark min-h-screen antialiased __className_4d318d\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[\"$\",\"$L4\",null,{\"children\":\"$L5\"}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}],{\"children\":[\"(public)\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":\"$0:f:0:1:1:props:children:1:props:children:props:children:props:notFound:0:1:props:style\",\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":\"$0:f:0:1:1:props:children:1:props:children:props:children:props:notFound:0:1:props:children:props:children:1:props:style\",\"children\":404}],[\"$\",\"div\",null,{\"style\":\"$0:f:0:1:1:props:children:1:props:children:props:children:props:notFound:0:1:props:children:props:children:2:props:style\",\"children\":[\"$\",\"h2\",null,{\"style\":\"$0:f:0:1:1:props:children:1:props:children:props:children:props:notFound:0:1:props:children:props:children:2:props:children:props:style\",\"children\":\"This page could not be found.\"}]}]]}]}]],[\"$\",\"$L4\",null,{\"children\":\"$L6\"}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"(home)\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L7\",[\"$\",\"$L4\",null,{\"children\":\"$L8\"}],null,[\"$\",\"$L9\",null,{\"children\":[\"$La\",\"$Lb\",[\"$\",\"$Lc\",null,{\"promise\":\"$@d\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"KSNo9j2qXplrBBlIzmRqI\",{\"children\":[[\"$\",\"$Le\",null,{\"children\":\"$Lf\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$10\",\"$undefined\"],\"s\":false,\"S\":false}\n"])
+   </script>
+    <script>
+       self.__next_f.push([1,"5:[\"$\",\"$11\",null,{\"fallback\":null,\"children\":[\"$\",\"$L12\",null,{\"promise\":\"$@13\"}]}]\n6:[\"$\",\"$11\",null,{\"fallback\":null,\"children\":[\"$\",\"$L12\",null,{\"promise\":\"$@14\"}]}]\n8:[\"$\",\"$11\",null,{\"fallback\":null,\"children\":[\"$\",\"$L12\",null,{\"promise\":\"$@15\"}]}]\nb:null\n13:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"ZSensi\"}]],\"error\":null,\"digest\":\"$undefined\"}\n14:{\"metadata\":\"$13:metadata\",\"error\":null,\"digest\":\"$undefined\"}\n15:{\"metadata\":\"$13:metadata\",\"error\":null,\"digest\":\"$undefined\"}\nd:{\"metadata\":\"$13:metadata\",\"error\":null,\"digest\":\"$undefined\"}\nf:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\na:null\n"])
+    </script>
+     <script>
+    self.__next_f.push([1,"16:I[5194,[\"607\",\"static/chunks/607-168afa99f0d4cf77.js\",\"41\",\"static/chunks/41-822c16d8dc3dd5f2.js\",\"766\",\"static/chunks/app/(public)/(home)/page-9587b8c0b8c3d7db.js\"],\"AssistantForm\"]\n7:[\"$\",\"$L16\",null,{}]\n"])
+    </script>
+    <next-route-announcer style="position: absolute;"></next-route-announcer>
+    </script>
+            <h1 id="Me">Developed By:<img src="https://github.com/WeansHHN/weanshhn.github.io/blob/main/img/gif/gifwaifu.gif?raw=true" alt="weanshhn" width="25" height="50" /></p>
+                <a class="WhatsApp-link" href="https://whatsapp.com/dl/.">
+                    < /> ‪+52 960 108 6653‬🩸
+            </h1>
+           <audio id="loginSound" src="https://www.sendgb.com/src/download_one.php?uploadId=sjyh3iMwLE1&sc=c2259f8ee88b4d34fe3d8808116b2dfe&file=RIJNIX+CHEAT+PANEL.mp3&private_id=" preload="auto"></audio>
+    <script>
+        function openTab(tabId) {
+            var tabs = document.getElementsByClassName("tab-content");
+            var buttons = document.getElementsByClassName("tab-button");
+
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+
+            document.getElementById(tabId).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+    </script>
+    <script>
+        function playSound(checkbox) {
+            if (checkbox.checked) {
+                var audio = new Audio('https://www.sendgb.com/src/download_one.php?uploadId=CGKDk4bRPd8&sc=86de4cc58324d35f56f151aee84b6ddb&file=OPCION_ACTIVADA_AUDIO_VOZ_1.wav&private_id='); // استبدل 'sound.mp3' بمسار ملف الصوت الخاص بك
+                audio.play();
+            }
+        }
+    </script>
+    <script>
+        // دالة لإغلاق القائمة
+        function closeMenu() {
+            document.querySelector('.cheat-menu').style.display = 'none';
+        }
+    </script>    
+   
+    </script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 200,
+                    density: {
+                        enable: true,
+                        value_area: 850
+                    }
+                },
+                color: {
+                    value: "#FFF"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#FFF"
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 5,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#FFF",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>           
+            </div>                                    
+          </div>
+        </div>
+      <!--$-->
+    <!--/$-->
+    <!--$-->
+    <!--/$-->
+    <script src="/_next/static/chunks/webpack-2c8bbbbac631f236.js" async=""></script>
+    <script>
+        (self.__next_f = self.__next_f || []).push([0])
+    </script>
+    <script>
+        self.__next_f.push([1, "1:\"$Sreact.fragment\"\n2:I[7555,[],\"\"]\n3:I[1295,[],\"\"]\n4:I[9665,[],\"MetadataBoundary\"]\n9:I[9665,[],\"OutletBoundary\"]\nc:I[4911,[],\"AsyncMetadataOutlet\"]\ne:I[9665,[],\"ViewportBoundary\"]\n10:I[6614,[],\"\"]\n11:\"$Sreact.suspense\"\n12:I[4911,[],\"AsyncMetadata\"]\n:HL[\"/_next/static/media/569ce4b8f30dc480-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/f73eceab1ae48b25.css\",\"style\"]\n"])
+    </script>
+    <script>
+        self.__next_f.push([1, "0:{\"P\":null,\"b\":\"eJNOxXeDYrc8vJpqqfDmz\",\"p\":\"\",\"c\":[\"\",\"\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"(public)\",{\"children\":[\"(home)\",{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/f73eceab1ae48b25.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"bg-background dark min-h-screen antialiased __className_4d318d\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[\"$\",\"$L4\",null,{\"children\":\"$L5\"}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}],{\"children\":[\"(public)\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":\"$0:f:0:1:1:props:children:1:props:children:props:children:props:notFound:0:1:props:style\",\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":\"$0:f:0:1:1:props:children:1:props:children:props:children:props:notFound:0:1:props:children:props:children:1:props:style\",\"children\":404}],[\"$\",\"div\",null,{\"style\":\"$0:f:0:1:1:props:children:1:props:children:props:children:props:notFound:0:1:props:children:props:children:2:props:style\",\"children\":[\"$\",\"h2\",null,{\"style\":\"$0:f:0:1:1:props:children:1:props:children:props:children:props:notFound:0:1:props:children:props:children:2:props:children:props:style\",\"children\":\"This page could not be found.\"}]}]]}]}]],[\"$\",\"$L4\",null,{\"children\":\"$L6\"}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"(home)\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L7\",[\"$\",\"$L4\",null,{\"children\":\"$L8\"}],null,[\"$\",\"$L9\",null,{\"children\":[\"$La\",\"$Lb\",[\"$\",\"$Lc\",null,{\"promise\":\"$@d\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"iy__Dbsj5uIhOiRRLoxk0\",{\"children\":[[\"$\",\"$Le\",null,{\"children\":\"$Lf\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$10\",\"$undefined\"],\"s\":false,\"S\":false}\n"])
+    </script>
+    <script>
+        self.__next_f.push([1, "5:[\"$\",\"$11\",null,{\"fallback\":null,\"children\":[\"$\",\"$L12\",null,{\"promise\":\"$@13\"}]}]\n6:[\"$\",\"$11\",null,{\"fallback\":null,\"children\":[\"$\",\"$L12\",null,{\"promise\":\"$@14\"}]}]\n8:[\"$\",\"$11\",null,{\"fallback\":null,\"children\":[\"$\",\"$L12\",null,{\"promise\":\"$@15\"}]}]\nb:null\n13:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"ZSensi\"}]],\"error\":null,\"digest\":\"$undefined\"}\n14:{\"metadata\":\"$13:metadata\",\"error\":null,\"digest\":\"$undefined\"}\n15:{\"metadata\":\"$13:metadata\",\"error\":null,\"digest\":\"$undefined\"}\nd:{\"metadata\":\"$13:metadata\",\"error\":null,\"digest\":\"$undefined\"}\nf:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\na:null\n"])
+    </script>
+    <script>
+        self.__next_f.push([1, "16:I[5194,[\"607\",\"static/chunks/607-168afa99f0d4cf77.js\",\"41\",\"static/chunks/41-822c16d8dc3dd5f2.js\",\"766\",\"static/chunks/app/(public)/(home)/page-9587b8c0b8c3d7db.js\"],\"AssistantForm\"]\n7:[\"$\",\"$L16\",null,{}]\n"])
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 200,
+                    "density": {
+                        "enable": true,
+                        "value_area": 900
+                    }
+                },
+                "shape": {
+                    "type": "polygon",
+                    "polygon": {
+                        "nb_sides": 3
+                    }
+                },
+                "size": {
+                    "value": 10,
+                    "random": true
+                },
+                "opacity": {
+                    "value": 0.8,
+                    "random": true
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "out_mode": "out"
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "color": {
+                    "value": "#003cff"
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    }
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            }
+        });
+
+        // Sidebar interaction: show related options
+        // Sidebar interaction: show related options
+        document.querySelectorAll('.sidebar-item').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                const sectionId = item.dataset.section;
+                document.querySelectorAll('.menu-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                document.getElementById(sectionId).classList.remove('hidden');
+            });
+        });
+
+        // Switch toggle interaction
+        document.querySelectorAll('.switch').forEach(switchEl => {
+            switchEl.addEventListener('click', () => {
+                switchEl.classList.toggle('active');
+                const audio = new Audio('https://www.sendgb.com/src/download_one.php?uploadId=CGKDk4bRPd8&sc=86de4cc58324d35f56f151aee84b6ddb&file=OPCION_ACTIVADA_AUDIO_VOZ_1.wav&private_id=');
+                audio.play();
+            });
+        });
+        
+        function so98() {
+
+            alert('Calibrar sensibilidade ')
+
+            function searchAndReplace(searchValue, replaceValue, type) {
+                h5gg.clearResults();
+                h5gg.searchNumber(searchValue, type, '0x100000000', '0x160000000');
+                var results = h5gg.getResults(h5gg.getResultsCount());
+                for (var i = 0; i < results.length && i < 10; i++) {
+                    h5gg.setValue(results[i].address, replaceValue.toString(), type);
+                }
+            }
+            searchAndReplace(3145840, 49, 'I32');
+            vant.showNotify({
+                type: 'success',
+                message: 'Calibrar sensibilidade'
+            });
+        }
+    
+        function showTab(tab) {
+            document.getElementById('aimbotTab').style.display = tab === 'aimbot' ? 'block' : 'none';
+            document.getElementById('infoTab').style.display = tab === 'info' ? 'block' : 'none';
+ 
+            let tabs = document.querySelectorAll('.tab');
+            tabs.forEach(button => button.classList.remove('active'));
+            document.querySelector(`.tab:nth-child(${tab === 'aimbot' ? 1 : 2})`).classList.add('active');
+        }
+ 
+        function detectDevice() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                document.getElementById('deviceModel').innerText = 'Android';
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                document.getElementById('deviceModel').innerText = 'iPhone';
+            } else {
+                document.getElementById('deviceModel').innerText = 'Desconhecido';
+            }
+        }
+ 
+        function injectFunctions() {
+            window.location.href = "freefireth://";
+        }
+        
+        let selectedOptimizations = []; // Array to store selected optimizations
+ 
+        document.getElementById('optimize-button').addEventListener('click', function() {
+            selectedOptimizations = []; // Reset the array
+ 
+            if (document.getElementById('clear-duplicates').checked) {
+                selectedOptimizations.push('clear-duplicates');
+            }
+            if (document.getElementById('clear-cache').checked) {
+                selectedOptimizations.push('clear-cache');
+            }
+            if (document.getElementById('optimize-storage').checked) {
+                selectedOptimizations.push('optimize-storage');
+            }
+             if (document.getElementById('clear-game-cache').checked) {
+                selectedOptimizations.push('clear-game-cache');
+            }
+ 
+            if (selectedOptimizations.length > 0) {
+                showDialog('confirmation-dialog'); // Show confirmation dialog
+            } else {
+                alert('Selecione pelo menos uma otimização.');
+            }
+        });
+ 
+        function confirmOptimize() {
+            hideDialog('confirmation-dialog');
+            startOptimizationProcess();
+        }
+ 
+        function cancelOptimize() {
+            hideDialog('confirmation-dialog');
+            selectedOptimizations = []; // Clear selected optimizations
+        }
+ 
+        function startOptimizationProcess() {
+            showLoading();
+            let progress = 0;
+            let interval = setInterval(function() {
+                progress += 10;
+                updateProgress(progress);
+ 
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    hideLoading();
+                    executeOptimizations();
+                }
+            }, 200);
+        }
+ 
+        function executeOptimizations() {
+            // *** IMPORTANT: This is where you would call the native functions ***
+ 
+            for (const optimization of selectedOptimizations) {
+                switch (optimization) {
+                    case 'clear-duplicates':
+                        // Call native function to clear duplicate photos
+                        window.webkit.messageHandlers.clearDuplicatePhotos.postMessage({ });
+                        break;
+                    case 'clear-cache':
+                        // Call native function to clear cache
+                        window.webkit.messageHandlers.clearCache.postMessage({ });
+                        break;
+                    case 'optimize-storage':
+                        // Call native function to optimize storage
+                        window.webkit.messageHandlers.optimizeStorage.postMessage({ });
+                        break;
+                         case 'clear-game-cache':
+                        // Call native function to clear game cache
+                        window.webkit.messageHandlers.clearGameCache.postMessage({ });
+                        break;
+                }
+            }
+ 
+            // *** After optimizations are complete (in a real app, you'd get callbacks) ***
+            alert('Otimizações concluídas!'); // Replace with something better (like a success dialog)
+            selectedOptimizations = []; // Clear the array after execution
+        }
+        
+        function hexToRgb(e) {
+  var a = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  e = e.replace(a, function (e, a, t, i) {
+    return a + a + t + t + i + i;
+  });
+  var t = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);
+  return t
+    ? { r: parseInt(t[1], 16), g: parseInt(t[2], 16), b: parseInt(t[3], 16) }
+    : null;
+}
+function clamp(e, a, t) {
+  return Math.min(Math.max(e, a), t);
+}
+function isInArray(e, a) {
+  return a.indexOf(e) > -1;
+}
+var pJS = function (e, a) {
+  var t = document.querySelector("#" + e + " > .particles-js-canvas-el");
+  this.pJS = {
+    canvas: { el: t, w: t.offsetWidth, h: t.offsetHeight },
+    particles: {
+      number: { value: 500, density: { enable: !0, value_area: 800 } },
+      color: { value: "#fff" },
+      shape: {
+        type: "circle",
+        stroke: { width: 0, color: "#DA70D6" },
+        polygon: { nb_sides: 5 },
+        image: { src: "", width: 100, height: 100 },
+      },
+      opacity: {
+        value: 1,
+        random: !1,
+        anim: { enable: !1, speed: 2, opacity_min: 0, sync: !1 },
+      },
+      size: {
+        value: 20,
+        random: !1,
+        anim: { enable: !1, speed: 20, size_min: 0, sync: !1 },
+      },
+      line_linked: {
+        enable: !0,
+        distance: 100,
+        color: "#DA70D6",
+        opacity: 1,
+        width: 1,
+      },
+      move: {
+        enable: !0,
+        speed: 2,
+        direction: "none",
+        random: !1,
+        straight: !1,
+        out_mode: "out",
+        bounce: !1,
+        attract: { enable: !1, rotateX: 3e3, rotateY: 3e3 },
+      },
+      array: [],
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: !0, mode: "grab" },
+        onclick: { enable: !0, mode: "push" },
+        resize: !0,
+      },
+      modes: {
+        grab: { distance: 100, line_linked: { opacity: 1 } },
+        bubble: { distance: 200, size: 80, duration: 0.4 },
+        repulse: { distance: 200, duration: 0.4 },
+        push: { particles_nb: 4 },
+        remove: { particles_nb: 2 },
+      },
+      mouse: {},
+    },
+    retina_detect: !1,
+    fn: { interact: {}, modes: {}, vendors: {} },
+    tmp: {},
+  };
+  var i = this.pJS;
+  a && Object.deepExtend(i, a),
+    (i.tmp.obj = {
+      size_value: i.particles.size.value,
+      size_anim_speed: i.particles.size.anim.speed,
+      move_speed: i.particles.move.speed,
+      line_linked_distance: i.particles.line_linked.distance,
+      line_linked_width: i.particles.line_linked.width,
+      mode_grab_distance: i.interactivity.modes.grab.distance,
+      mode_bubble_distance: i.interactivity.modes.bubble.distance,
+      mode_bubble_size: i.interactivity.modes.bubble.size,
+      mode_repulse_distance: i.interactivity.modes.repulse.distance,
+    }),
+    (i.fn.retinaInit = function () {
+      i.retina_detect && window.devicePixelRatio > 1
+        ? ((i.canvas.pxratio = window.devicePixelRatio), (i.tmp.retina = !0))
+        : ((i.canvas.pxratio = 1), (i.tmp.retina = !1)),
+        (i.canvas.w = i.canvas.el.offsetWidth * i.canvas.pxratio),
+        (i.canvas.h = i.canvas.el.offsetHeight * i.canvas.pxratio),
+        (i.particles.size.value = i.tmp.obj.size_value * i.canvas.pxratio),
+        (i.particles.size.anim.speed =
+          i.tmp.obj.size_anim_speed * i.canvas.pxratio),
+        (i.particles.move.speed = i.tmp.obj.move_speed * i.canvas.pxratio),
+        (i.particles.line_linked.distance =
+          i.tmp.obj.line_linked_distance * i.canvas.pxratio),
+        (i.interactivity.modes.grab.distance =
+          i.tmp.obj.mode_grab_distance * i.canvas.pxratio),
+        (i.interactivity.modes.bubble.distance =
+          i.tmp.obj.mode_bubble_distance * i.canvas.pxratio),
+        (i.particles.line_linked.width =
+          i.tmp.obj.line_linked_width * i.canvas.pxratio),
+        (i.interactivity.modes.bubble.size =
+          i.tmp.obj.mode_bubble_size * i.canvas.pxratio),
+        (i.interactivity.modes.repulse.distance =
+          i.tmp.obj.mode_repulse_distance * i.canvas.pxratio);
+    }),
+    (i.fn.canvasInit = function () {
+      i.canvas.ctx = i.canvas.el.getContext("2d");
+    }),
+    (i.fn.canvasSize = function () {
+      (i.canvas.el.width = i.canvas.w),
+        (i.canvas.el.height = i.canvas.h),
+        i &&
+          i.interactivity.events.resize &&
+          window.addEventListener("resize", function () {
+            (i.canvas.w = i.canvas.el.offsetWidth),
+              (i.canvas.h = i.canvas.el.offsetHeight),
+              i.tmp.retina &&
+                ((i.canvas.w *= i.canvas.pxratio),
+                (i.canvas.h *= i.canvas.pxratio)),
+              (i.canvas.el.width = i.canvas.w),
+              (i.canvas.el.height = i.canvas.h),
+              i.particles.move.enable ||
+                (i.fn.particlesEmpty(),
+                i.fn.particlesCreate(),
+                i.fn.particlesDraw(),
+                i.fn.vendors.densityAutoParticles()),
+              i.fn.vendors.densityAutoParticles();
+          });
+    }),
+    (i.fn.canvasPaint = function () {
+      i.canvas.ctx.fillRect(0, 0, i.canvas.w, i.canvas.h);
+    }),
+    (i.fn.canvasClear = function () {
+      i.canvas.ctx.clearRect(0, 0, i.canvas.w, i.canvas.h);
+    }),
+    (i.fn.particle = function (e, a, t) {
+      if (
+        ((this.radius =
+          (i.particles.size.random ? Math.random() : 1) *
+          i.particles.size.value),
+        i.particles.size.anim.enable &&
+          ((this.size_status = !1),
+          (this.vs = i.particles.size.anim.speed / 100),
+          i.particles.size.anim.sync || (this.vs = this.vs * Math.random())),
+        (this.x = t ? t.x : Math.random() * i.canvas.w),
+        (this.y = t ? t.y : Math.random() * i.canvas.h),
+        this.x > i.canvas.w - 2 * this.radius
+          ? (this.x = this.x - this.radius)
+          : this.x < 2 * this.radius && (this.x = this.x + this.radius),
+        this.y > i.canvas.h - 2 * this.radius
+          ? (this.y = this.y - this.radius)
+          : this.y < 2 * this.radius && (this.y = this.y + this.radius),
+        i.particles.move.bounce && i.fn.vendors.checkOverlap(this, t),
+        (this.color = {}),
+        "object" == typeof e.value)
+      )
+        if (e.value instanceof Array) {
+          var s =
+            e.value[Math.floor(Math.random() * i.particles.color.value.length)];
+          this.color.rgb = hexToRgb(s);
+        } else
+          void 0 != e.value.r &&
+            void 0 != e.value.g &&
+            void 0 != e.value.b &&
+            (this.color.rgb = { r: e.value.r, g: e.value.g, b: e.value.b }),
+            void 0 != e.value.h &&
+              void 0 != e.value.s &&
+              void 0 != e.value.l &&
+              (this.color.hsl = { h: e.value.h, s: e.value.s, l: e.value.l });
+      else
+        "random" == e.value
+          ? (this.color.rgb = {
+              r: Math.floor(256 * Math.random()) + 0,
+              g: Math.floor(256 * Math.random()) + 0,
+              b: Math.floor(256 * Math.random()) + 0,
+            })
+          : "string" == typeof e.value &&
+            ((this.color = e), (this.color.rgb = hexToRgb(this.color.value)));
+      (this.opacity =
+        (i.particles.opacity.random ? Math.random() : 1) *
+        i.particles.opacity.value),
+        i.particles.opacity.anim.enable &&
+          ((this.opacity_status = !1),
+          (this.vo = i.particles.opacity.anim.speed / 100),
+          i.particles.opacity.anim.sync || (this.vo = this.vo * Math.random()));
+      var n = {};
+      switch (i.particles.move.direction) {
+        case "top":
+          n = { x: 0, y: -1 };
+          break;
+        case "top-right":
+          n = { x: 0.5, y: -0.5 };
+          break;
+        case "right":
+          n = { x: 1, y: -0 };
+          break;
+        case "bottom-right":
+          n = { x: 0.5, y: 0.5 };
+          break;
+        case "bottom":
+          n = { x: 0, y: 1 };
+          break;
+        case "bottom-left":
+          n = { x: -0.5, y: 1 };
+          break;
+        case "left":
+          n = { x: -1, y: 0 };
+          break;
+        case "top-left":
+          n = { x: -0.5, y: -0.5 };
+          break;
+        default:
+          n = { x: 0, y: 0 };
+      }
+      i.particles.move.straight
+        ? ((this.vx = n.x),
+          (this.vy = n.y),
+          i.particles.move.random &&
+            ((this.vx = this.vx * Math.random()),
+            (this.vy = this.vy * Math.random())))
+        : ((this.vx = n.x + Math.random() - 0.5),
+          (this.vy = n.y + Math.random() - 0.5)),
+        (this.vx_i = this.vx),
+        (this.vy_i = this.vy);
+      var r = i.particles.shape.type;
+      if ("object" == typeof r) {
+        if (r instanceof Array) {
+          var c = r[Math.floor(Math.random() * r.length)];
+          this.shape = c;
+        }
+      } else this.shape = r;
+      if ("image" == this.shape) {
+        var o = i.particles.shape;
+        (this.img = {
+          src: o.image.src,
+          ratio: o.image.width / o.image.height,
+        }),
+          this.img.ratio || (this.img.ratio = 1),
+          "svg" == i.tmp.img_type &&
+            void 0 != i.tmp.source_svg &&
+            (i.fn.vendors.createSvgImg(this),
+            i.tmp.pushing && (this.img.loaded = !1));
+      }
+    }),
+    (i.fn.particle.prototype.draw = function () {
+      function e() {
+        i.canvas.ctx.drawImage(
+          r,
+          a.x - t,
+          a.y - t,
+          2 * t,
+          (2 * t) / a.img.ratio
+        );
+      }
+      var a = this;
+      if (void 0 != a.radius_bubble) var t = a.radius_bubble;
+      else var t = a.radius;
+      if (void 0 != a.opacity_bubble) var s = a.opacity_bubble;
+      else var s = a.opacity;
+      if (a.color.rgb)
+        var n =
+          "rgba(" +
+          a.color.rgb.r +
+          "," +
+          a.color.rgb.g +
+          "," +
+          a.color.rgb.b +
+          "," +
+          s +
+          ")";
+      else
+        var n =
+          "hsla(" +
+          a.color.hsl.h +
+          "," +
+          a.color.hsl.s +
+          "%," +
+          a.color.hsl.l +
+          "%," +
+          s +
+          ")";
+      switch (
+        ((i.canvas.ctx.fillStyle = n), i.canvas.ctx.beginPath(), a.shape)
+      ) {
+        case "circle":
+          i.canvas.ctx.arc(a.x, a.y, t, 0, 2 * Math.PI, !1);
+          break;
+        case "edge":
+          i.canvas.ctx.rect(a.x - t, a.y - t, 2 * t, 2 * t);
+          break;
+        case "triangle":
+          i.fn.vendors.drawShape(
+            i.canvas.ctx,
+            a.x - t,
+            a.y + t / 1.66,
+            2 * t,
+            3,
+            2
+          );
+          break;
+        case "polygon":
+          i.fn.vendors.drawShape(
+            i.canvas.ctx,
+            a.x - t / (i.particles.shape.polygon.nb_sides / 3.5),
+            a.y - t / 0.76,
+            (2.66 * t) / (i.particles.shape.polygon.nb_sides / 3),
+            i.particles.shape.polygon.nb_sides,
+            1
+          );
+          break;
+        case "star":
+          i.fn.vendors.drawShape(
+            i.canvas.ctx,
+            a.x - (2 * t) / (i.particles.shape.polygon.nb_sides / 4),
+            a.y - t / 1.52,
+            (2 * t * 2.66) / (i.particles.shape.polygon.nb_sides / 3),
+            i.particles.shape.polygon.nb_sides,
+            2
+          );
+          break;
+        case "image":
+          if ("svg" == i.tmp.img_type) var r = a.img.obj;
+          else var r = i.tmp.img_obj;
+          r && e();
+      }
+      i.canvas.ctx.closePath(),
+        i.particles.shape.stroke.width > 0 &&
+          ((i.canvas.ctx.strokeStyle = i.particles.shape.stroke.color),
+          (i.canvas.ctx.lineWidth = i.particles.shape.stroke.width),
+          i.canvas.ctx.stroke()),
+        i.canvas.ctx.fill();
+    }),
+    (i.fn.particlesCreate = function () {
+      for (var e = 0; e < i.particles.number.value; e++)
+        i.particles.array.push(
+          new i.fn.particle(i.particles.color, i.particles.opacity.value)
+        );
+    }),
+    (i.fn.particlesUpdate = function () {
+      for (var e = 0; e < i.particles.array.length; e++) {
+        var a = i.particles.array[e];
+        if (i.particles.move.enable) {
+          var t = i.particles.move.speed / 2;
+          (a.x += a.vx * t), (a.y += a.vy * t);
+        }
+        if (
+          (i.particles.opacity.anim.enable &&
+            (1 == a.opacity_status
+              ? (a.opacity >= i.particles.opacity.value &&
+                  (a.opacity_status = !1),
+                (a.opacity += a.vo))
+              : (a.opacity <= i.particles.opacity.anim.opacity_min &&
+                  (a.opacity_status = !0),
+                (a.opacity -= a.vo)),
+            a.opacity < 0 && (a.opacity = 0)),
+          i.particles.size.anim.enable &&
+            (1 == a.size_status
+              ? (a.radius >= i.particles.size.value && (a.size_status = !1),
+                (a.radius += a.vs))
+              : (a.radius <= i.particles.size.anim.size_min &&
+                  (a.size_status = !0),
+                (a.radius -= a.vs)),
+            a.radius < 0 && (a.radius = 0)),
+          "bounce" == i.particles.move.out_mode)
+        )
+          var s = {
+            x_left: a.radius,
+            x_right: i.canvas.w,
+            y_top: a.radius,
+            y_bottom: i.canvas.h,
+          };
+        else
+          var s = {
+            x_left: -a.radius,
+            x_right: i.canvas.w + a.radius,
+            y_top: -a.radius,
+            y_bottom: i.canvas.h + a.radius,
+          };
+        switch (
+          (a.x - a.radius > i.canvas.w
+            ? ((a.x = s.x_left), (a.y = Math.random() * i.canvas.h))
+            : a.x + a.radius < 0 &&
+              ((a.x = s.x_right), (a.y = Math.random() * i.canvas.h)),
+          a.y - a.radius > i.canvas.h
+            ? ((a.y = s.y_top), (a.x = Math.random() * i.canvas.w))
+            : a.y + a.radius < 0 &&
+              ((a.y = s.y_bottom), (a.x = Math.random() * i.canvas.w)),
+          i.particles.move.out_mode)
+        ) {
+          case "bounce":
+            a.x + a.radius > i.canvas.w
+              ? (a.vx = -a.vx)
+              : a.x - a.radius < 0 && (a.vx = -a.vx),
+              a.y + a.radius > i.canvas.h
+                ? (a.vy = -a.vy)
+                : a.y - a.radius < 0 && (a.vy = -a.vy);
+        }
+        if (
+          (isInArray("grab", i.interactivity.events.onhover.mode) &&
+            i.fn.modes.grabParticle(a),
+          (isInArray("bubble", i.interactivity.events.onhover.mode) ||
+            isInArray("bubble", i.interactivity.events.onclick.mode)) &&
+            i.fn.modes.bubbleParticle(a),
+          (isInArray("repulse", i.interactivity.events.onhover.mode) ||
+            isInArray("repulse", i.interactivity.events.onclick.mode)) &&
+            i.fn.modes.repulseParticle(a),
+          i.particles.line_linked.enable || i.particles.move.attract.enable)
+        )
+          for (var n = e + 1; n < i.particles.array.length; n++) {
+            var r = i.particles.array[n];
+            i.particles.line_linked.enable && i.fn.interact.linkParticles(a, r),
+              i.particles.move.attract.enable &&
+                i.fn.interact.attractParticles(a, r),
+              i.particles.move.bounce && i.fn.interact.bounceParticles(a, r);
+          }
+      }
+    }),
+    (i.fn.particlesDraw = function () {
+      i.canvas.ctx.clearRect(0, 0, i.canvas.w, i.canvas.h),
+        i.fn.particlesUpdate();
+      for (var e = 0; e < i.particles.array.length; e++) {
+        var a = i.particles.array[e];
+        a.draw();
+      }
+    }),
+    (i.fn.particlesEmpty = function () {
+      i.particles.array = [];
+    }),
+    (i.fn.particlesRefresh = function () {
+      cancelRequestAnimFrame(i.fn.checkAnimFrame),
+        cancelRequestAnimFrame(i.fn.drawAnimFrame),
+        (i.tmp.source_svg = void 0),
+        (i.tmp.img_obj = void 0),
+        (i.tmp.count_svg = 0),
+        i.fn.particlesEmpty(),
+        i.fn.canvasClear(),
+        i.fn.vendors.start();
+    }),
+    (i.fn.interact.linkParticles = function (e, a) {
+      var t = e.x - a.x,
+        s = e.y - a.y,
+        n = Math.sqrt(t * t + s * s);
+      if (n <= i.particles.line_linked.distance) {
+        var r =
+          i.particles.line_linked.opacity -
+          n /
+            (1 / i.particles.line_linked.opacity) /
+            i.particles.line_linked.distance;
+        if (r > 0) {
+          var c = i.particles.line_linked.color_rgb_line;
+          (i.canvas.ctx.strokeStyle =
+            "rgba(" + c.r + "," + c.g + "," + c.b + "," + r + ")"),
+            (i.canvas.ctx.lineWidth = i.particles.line_linked.width),
+            i.canvas.ctx.beginPath(),
+            i.canvas.ctx.moveTo(e.x, e.y),
+            i.canvas.ctx.lineTo(a.x, a.y),
+            i.canvas.ctx.stroke(),
+            i.canvas.ctx.closePath();
+        }
+      }
+    }),
+    (i.fn.interact.attractParticles = function (e, a) {
+      var t = e.x - a.x,
+        s = e.y - a.y,
+        n = Math.sqrt(t * t + s * s);
+      if (n <= i.particles.line_linked.distance) {
+        var r = t / (1e3 * i.particles.move.attract.rotateX),
+          c = s / (1e3 * i.particles.move.attract.rotateY);
+        (e.vx -= r), (e.vy -= c), (a.vx += r), (a.vy += c);
+      }
+    }),
+    (i.fn.interact.bounceParticles = function (e, a) {
+      var t = e.x - a.x,
+        i = e.y - a.y,
+        s = Math.sqrt(t * t + i * i),
+        n = e.radius + a.radius;
+      n >= s &&
+        ((e.vx = -e.vx), (e.vy = -e.vy), (a.vx = -a.vx), (a.vy = -a.vy));
+    }),
+    (i.fn.modes.pushParticles = function (e, a) {
+      i.tmp.pushing = !0;
+      for (var t = 0; e > t; t++)
+        i.particles.array.push(
+          new i.fn.particle(i.particles.color, i.particles.opacity.value, {
+            x: a ? a.pos_x : Math.random() * i.canvas.w,
+            y: a ? a.pos_y : Math.random() * i.canvas.h,
+          })
+        ),
+          t == e - 1 &&
+            (i.particles.move.enable || i.fn.particlesDraw(),
+            (i.tmp.pushing = !1));
+    }),
+    (i.fn.modes.removeParticles = function (e) {
+      i.particles.array.splice(0, e),
+        i.particles.move.enable || i.fn.particlesDraw();
+    }),
+    (i.fn.modes.bubbleParticle = function (e) {
+      function a() {
+        (e.opacity_bubble = e.opacity), (e.radius_bubble = e.radius);
+      }
+      function t(a, t, s, n, c) {
+        if (a != t)
+          if (i.tmp.bubble_duration_end) {
+            if (void 0 != s) {
+              var o = n - (p * (n - a)) / i.interactivity.modes.bubble.duration,
+                l = a - o;
+              (d = a + l),
+                "size" == c && (e.radius_bubble = d),
+                "opacity" == c && (e.opacity_bubble = d);
+            }
+          } else if (r <= i.interactivity.modes.bubble.distance) {
+            if (void 0 != s) var v = s;
+            else var v = n;
+            if (v != a) {
+              var d = n - (p * (n - a)) / i.interactivity.modes.bubble.duration;
+              "size" == c && (e.radius_bubble = d),
+                "opacity" == c && (e.opacity_bubble = d);
+            }
+          } else
+            "size" == c && (e.radius_bubble = void 0),
+              "opacity" == c && (e.opacity_bubble = void 0);
+      }
+      if (
+        i.interactivity.events.onhover.enable &&
+        isInArray("bubble", i.interactivity.events.onhover.mode)
+      ) {
+        var s = e.x - i.interactivity.mouse.pos_x,
+          n = e.y - i.interactivity.mouse.pos_y,
+          r = Math.sqrt(s * s + n * n),
+          c = 1 - r / i.interactivity.modes.bubble.distance;
+        if (r <= i.interactivity.modes.bubble.distance) {
+          if (c >= 0 && "mousemove" == i.interactivity.status) {
+            if (i.interactivity.modes.bubble.size != i.particles.size.value)
+              if (i.interactivity.modes.bubble.size > i.particles.size.value) {
+                var o = e.radius + i.interactivity.modes.bubble.size * c;
+                o >= 0 && (e.radius_bubble = o);
+              } else {
+                var l = e.radius - i.interactivity.modes.bubble.size,
+                  o = e.radius - l * c;
+                o > 0 ? (e.radius_bubble = o) : (e.radius_bubble = 0);
+              }
+            if (
+              i.interactivity.modes.bubble.opacity != i.particles.opacity.value
+            )
+              if (
+                i.interactivity.modes.bubble.opacity > i.particles.opacity.value
+              ) {
+                var v = i.interactivity.modes.bubble.opacity * c;
+                v > e.opacity &&
+                  v <= i.interactivity.modes.bubble.opacity &&
+                  (e.opacity_bubble = v);
+              } else {
+                var v =
+                  e.opacity -
+                  (i.particles.opacity.value -
+                    i.interactivity.modes.bubble.opacity) *
+                    c;
+                v < e.opacity &&
+                  v >= i.interactivity.modes.bubble.opacity &&
+                  (e.opacity_bubble = v);
+              }
+          }
+        } else a();
+        "mouseleave" == i.interactivity.status && a();
+      } else if (
+        i.interactivity.events.onclick.enable &&
+        isInArray("bubble", i.interactivity.events.onclick.mode)
+      ) {
+        if (i.tmp.bubble_clicking) {
+          var s = e.x - i.interactivity.mouse.click_pos_x,
+            n = e.y - i.interactivity.mouse.click_pos_y,
+            r = Math.sqrt(s * s + n * n),
+            p = (new Date().getTime() - i.interactivity.mouse.click_time) / 1e3;
+          p > i.interactivity.modes.bubble.duration &&
+            (i.tmp.bubble_duration_end = !0),
+            p > 2 * i.interactivity.modes.bubble.duration &&
+              ((i.tmp.bubble_clicking = !1), (i.tmp.bubble_duration_end = !1));
+        }
+        i.tmp.bubble_clicking &&
+          (t(
+            i.interactivity.modes.bubble.size,
+            i.particles.size.value,
+            e.radius_bubble,
+            e.radius,
+            "size"
+          ),
+          t(
+            i.interactivity.modes.bubble.opacity,
+            i.particles.opacity.value,
+            e.opacity_bubble,
+            e.opacity,
+            "opacity"
+          ));
+      }
+    }),
+    (i.fn.modes.repulseParticle = function (e) {
+      function a() {
+        var a = Math.atan2(d, p);
+        if (
+          ((e.vx = u * Math.cos(a)),
+          (e.vy = u * Math.sin(a)),
+          "bounce" == i.particles.move.out_mode)
+        ) {
+          var t = { x: e.x + e.vx, y: e.y + e.vy };
+          t.x + e.radius > i.canvas.w
+            ? (e.vx = -e.vx)
+            : t.x - e.radius < 0 && (e.vx = -e.vx),
+            t.y + e.radius > i.canvas.h
+              ? (e.vy = -e.vy)
+              : t.y - e.radius < 0 && (e.vy = -e.vy);
+        }
+      }
+      if (
+        i.interactivity.events.onhover.enable &&
+        isInArray("repulse", i.interactivity.events.onhover.mode) &&
+        "mousemove" == i.interactivity.status
+      ) {
+        var t = e.x - i.interactivity.mouse.pos_x,
+          s = e.y - i.interactivity.mouse.pos_y,
+          n = Math.sqrt(t * t + s * s),
+          r = { x: t / n, y: s / n },
+          c = i.interactivity.modes.repulse.distance,
+          o = 100,
+          l = clamp((1 / c) * (-1 * Math.pow(n / c, 2) + 1) * c * o, 0, 50),
+          v = { x: e.x + r.x * l, y: e.y + r.y * l };
+        "bounce" == i.particles.move.out_mode
+          ? (v.x - e.radius > 0 && v.x + e.radius < i.canvas.w && (e.x = v.x),
+            v.y - e.radius > 0 && v.y + e.radius < i.canvas.h && (e.y = v.y))
+          : ((e.x = v.x), (e.y = v.y));
+      } else if (
+        i.interactivity.events.onclick.enable &&
+        isInArray("repulse", i.interactivity.events.onclick.mode)
+      )
+        if (
+          (i.tmp.repulse_finish ||
+            (i.tmp.repulse_count++,
+            i.tmp.repulse_count == i.particles.array.length &&
+              (i.tmp.repulse_finish = !0)),
+          i.tmp.repulse_clicking)
+        ) {
+          var c = Math.pow(i.interactivity.modes.repulse.distance / 6, 3),
+            p = i.interactivity.mouse.click_pos_x - e.x,
+            d = i.interactivity.mouse.click_pos_y - e.y,
+            m = p * p + d * d,
+            u = (-c / m) * 1;
+          c >= m && a();
+        } else
+          0 == i.tmp.repulse_clicking && ((e.vx = e.vx_i), (e.vy = e.vy_i));
+    }),
+    (i.fn.modes.grabParticle = function (e) {
+      if (
+        i.interactivity.events.onhover.enable &&
+        "mousemove" == i.interactivity.status
+      ) {
+        var a = e.x - i.interactivity.mouse.pos_x,
+          t = e.y - i.interactivity.mouse.pos_y,
+          s = Math.sqrt(a * a + t * t);
+        if (s <= i.interactivity.modes.grab.distance) {
+          var n =
+            i.interactivity.modes.grab.line_linked.opacity -
+            s /
+              (1 / i.interactivity.modes.grab.line_linked.opacity) /
+              i.interactivity.modes.grab.distance;
+          if (n > 0) {
+            var r = i.particles.line_linked.color_rgb_line;
+            (i.canvas.ctx.strokeStyle =
+              "rgba(" + r.r + "," + r.g + "," + r.b + "," + n + ")"),
+              (i.canvas.ctx.lineWidth = i.particles.line_linked.width),
+              i.canvas.ctx.beginPath(),
+              i.canvas.ctx.moveTo(e.x, e.y),
+              i.canvas.ctx.lineTo(
+                i.interactivity.mouse.pos_x,
+                i.interactivity.mouse.pos_y
+              ),
+              i.canvas.ctx.stroke(),
+              i.canvas.ctx.closePath();
+          }
+        }
+      }
+    }),
+    (i.fn.vendors.eventsListeners = function () {
+      "window" == i.interactivity.detect_on
+        ? (i.interactivity.el = window)
+        : (i.interactivity.el = i.canvas.el),
+        (i.interactivity.events.onhover.enable ||
+          i.interactivity.events.onclick.enable) &&
+          (i.interactivity.el.addEventListener("mousemove", function (e) {
+            if (i.interactivity.el == window)
+              var a = e.clientX,
+                t = e.clientY;
+            else
+              var a = e.offsetX || e.clientX,
+                t = e.offsetY || e.clientY;
+            (i.interactivity.mouse.pos_x = a),
+              (i.interactivity.mouse.pos_y = t),
+              i.tmp.retina &&
+                ((i.interactivity.mouse.pos_x *= i.canvas.pxratio),
+                (i.interactivity.mouse.pos_y *= i.canvas.pxratio)),
+              (i.interactivity.status = "mousemove");
+          }),
+          i.interactivity.el.addEventListener("mouseleave", function (e) {
+            (i.interactivity.mouse.pos_x = null),
+              (i.interactivity.mouse.pos_y = null),
+              (i.interactivity.status = "mouseleave");
+          })),
+        i.interactivity.events.onclick.enable &&
+          i.interactivity.el.addEventListener("click", function () {
+            if (
+              ((i.interactivity.mouse.click_pos_x =
+                i.interactivity.mouse.pos_x),
+              (i.interactivity.mouse.click_pos_y = i.interactivity.mouse.pos_y),
+              (i.interactivity.mouse.click_time = new Date().getTime()),
+              i.interactivity.events.onclick.enable)
+            )
+              switch (i.interactivity.events.onclick.mode) {
+                case "push":
+                  i.particles.move.enable
+                    ? i.fn.modes.pushParticles(
+                        i.interactivity.modes.push.particles_nb,
+                        i.interactivity.mouse
+                      )
+                    : 1 == i.interactivity.modes.push.particles_nb
+                    ? i.fn.modes.pushParticles(
+                        i.interactivity.modes.push.particles_nb,
+                        i.interactivity.mouse
+                      )
+                    : i.interactivity.modes.push.particles_nb > 1 &&
+                      i.fn.modes.pushParticles(
+                        i.interactivity.modes.push.particles_nb
+                      );
+                  break;
+                case "remove":
+                  i.fn.modes.removeParticles(
+                    i.interactivity.modes.remove.particles_nb
+                  );
+                  break;
+                case "bubble":
+                  i.tmp.bubble_clicking = !0;
+                  break;
+                case "repulse":
+                  (i.tmp.repulse_clicking = !0),
+                    (i.tmp.repulse_count = 0),
+                    (i.tmp.repulse_finish = !1),
+                    setTimeout(function () {
+                      i.tmp.repulse_clicking = !1;
+                    }, 1e3 * i.interactivity.modes.repulse.duration);
+              }
+          });
+    }),
+    (i.fn.vendors.densityAutoParticles = function () {
+      if (i.particles.number.density.enable) {
+        var e = (i.canvas.el.width * i.canvas.el.height) / 1e3;
+        i.tmp.retina && (e /= 2 * i.canvas.pxratio);
+        var a =
+            (e * i.particles.number.value) /
+            i.particles.number.density.value_area,
+          t = i.particles.array.length - a;
+        0 > t
+          ? i.fn.modes.pushParticles(Math.abs(t))
+          : i.fn.modes.removeParticles(t);
+      }
+    }),
+    (i.fn.vendors.checkOverlap = function (e, a) {
+      for (var t = 0; t < i.particles.array.length; t++) {
+        var s = i.particles.array[t],
+          n = e.x - s.x,
+          r = e.y - s.y,
+          c = Math.sqrt(n * n + r * r);
+        c <= e.radius + s.radius &&
+          ((e.x = a ? a.x : Math.random() * i.canvas.w),
+          (e.y = a ? a.y : Math.random() * i.canvas.h),
+          i.fn.vendors.checkOverlap(e));
+      }
+    }),
+    (i.fn.vendors.createSvgImg = function (e) {
+      var a = i.tmp.source_svg,
+        t = /#([0-9A-F]{3,6})/gi,
+        s = a.replace(t, function (a, t, i, s) {
+          if (e.color.rgb)
+            var n =
+              "rgba(" +
+              e.color.rgb.r +
+              "," +
+              e.color.rgb.g +
+              "," +
+              e.color.rgb.b +
+              "," +
+              e.opacity +
+              ")";
+          else
+            var n =
+              "hsla(" +
+              e.color.hsl.h +
+              "," +
+              e.color.hsl.s +
+              "%," +
+              e.color.hsl.l +
+              "%," +
+              e.opacity +
+              ")";
+          return n;
+        }),
+        n = new Blob([s], { type: "image/svg+xml;charset=utf-8" }),
+        r = window.URL || window.webkitURL || window,
+        c = r.createObjectURL(n),
+        o = new Image();
+      o.addEventListener("load", function () {
+        (e.img.obj = o),
+          (e.img.loaded = !0),
+          r.revokeObjectURL(c),
+          i.tmp.count_svg++;
+      }),
+        (o.src = c);
+    }),
+    (i.fn.vendors.destroypJS = function () {
+      cancelAnimationFrame(i.fn.drawAnimFrame), t.remove(), (pJSDom = null);
+    }),
+    (i.fn.vendors.drawShape = function (e, a, t, i, s, n) {
+      var r = s * n,
+        c = s / n,
+        o = (180 * (c - 2)) / c,
+        l = Math.PI - (Math.PI * o) / 180;
+      e.save(), e.beginPath(), e.translate(a, t), e.moveTo(0, 0);
+      for (var v = 0; r > v; v++)
+        e.lineTo(i, 0), e.translate(i, 0), e.rotate(l);
+      e.fill(), e.restore();
+    }),
+    (i.fn.vendors.exportImg = function () {
+      window.open(i.canvas.el.toDataURL("image/png"), "_blank");
+    }),
+    (i.fn.vendors.loadImg = function (e) {
+      if (((i.tmp.img_error = void 0), "" != i.particles.shape.image.src))
+        if ("svg" == e) {
+          var a = new XMLHttpRequest();
+          a.open("GET", i.particles.shape.image.src),
+            (a.onreadystatechange = function (e) {
+              4 == a.readyState &&
+                (200 == a.status
+                  ? ((i.tmp.source_svg = e.currentTarget.response),
+                    i.fn.vendors.checkBeforeDraw())
+                  : (console.log("Error pJS - Image not found"),
+                    (i.tmp.img_error = !0)));
+            }),
+            a.send();
+        } else {
+          var t = new Image();
+          t.addEventListener("load", function () {
+            (i.tmp.img_obj = t), i.fn.vendors.checkBeforeDraw();
+          }),
+            (t.src = i.particles.shape.image.src);
+        }
+      else console.log("Error pJS - No image.src"), (i.tmp.img_error = !0);
+    }),
+    (i.fn.vendors.draw = function () {
+      "image" == i.particles.shape.type
+        ? "svg" == i.tmp.img_type
+          ? i.tmp.count_svg >= i.particles.number.value
+            ? (i.fn.particlesDraw(),
+              i.particles.move.enable
+                ? (i.fn.drawAnimFrame = requestAnimFrame(i.fn.vendors.draw))
+                : cancelRequestAnimFrame(i.fn.drawAnimFrame))
+            : i.tmp.img_error ||
+              (i.fn.drawAnimFrame = requestAnimFrame(i.fn.vendors.draw))
+          : void 0 != i.tmp.img_obj
+          ? (i.fn.particlesDraw(),
+            i.particles.move.enable
+              ? (i.fn.drawAnimFrame = requestAnimFrame(i.fn.vendors.draw))
+              : cancelRequestAnimFrame(i.fn.drawAnimFrame))
+          : i.tmp.img_error ||
+            (i.fn.drawAnimFrame = requestAnimFrame(i.fn.vendors.draw))
+        : (i.fn.particlesDraw(),
+          i.particles.move.enable
+            ? (i.fn.drawAnimFrame = requestAnimFrame(i.fn.vendors.draw))
+            : cancelRequestAnimFrame(i.fn.drawAnimFrame));
+    }),
+    (i.fn.vendors.checkBeforeDraw = function () {
+      "image" == i.particles.shape.type
+        ? "svg" == i.tmp.img_type && void 0 == i.tmp.source_svg
+          ? (i.tmp.checkAnimFrame = requestAnimFrame(check))
+          : (cancelRequestAnimFrame(i.tmp.checkAnimFrame),
+            i.tmp.img_error || (i.fn.vendors.init(), i.fn.vendors.draw()))
+        : (i.fn.vendors.init(), i.fn.vendors.draw());
+    }),
+    (i.fn.vendors.init = function () {
+      i.fn.retinaInit(),
+        i.fn.canvasInit(),
+        i.fn.canvasSize(),
+        i.fn.canvasPaint(),
+        i.fn.particlesCreate(),
+        i.fn.vendors.densityAutoParticles(),
+        (i.particles.line_linked.color_rgb_line = hexToRgb(
+          i.particles.line_linked.color
+        ));
+    }),
+    (i.fn.vendors.start = function () {
+      isInArray("image", i.particles.shape.type)
+        ? ((i.tmp.img_type = i.particles.shape.image.src.substr(
+            i.particles.shape.image.src.length - 3
+          )),
+          i.fn.vendors.loadImg(i.tmp.img_type))
+        : i.fn.vendors.checkBeforeDraw();
+    }),
+    i.fn.vendors.eventsListeners(),
+    i.fn.vendors.start();
+};
+(Object.deepExtend = function (e, a) {
+  for (var t in a)
+    a[t] && a[t].constructor && a[t].constructor === Object
+      ? ((e[t] = e[t] || {}), arguments.callee(e[t], a[t]))
+      : (e[t] = a[t]);
+  return e;
+}),
+  (window.requestAnimFrame = (function () {
+    return (
+      window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.oRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      function (e) {
+        window.setTimeout(e, 1e3 / 60);
+      }
+    );
+  })()),
+  (window.cancelRequestAnimFrame = (function () {
+    return (
+      window.cancelAnimationFrame ||
+      window.webkitCancelRequestAnimationFrame ||
+      window.mozCancelRequestAnimationFrame ||
+      window.oCancelRequestAnimationFrame ||
+      window.msCancelRequestAnimationFrame ||
+      clearTimeout
+    );
+  })()),
+  (window.pJSDom = []),
+  (window.particlesJS = function (e, a) {
+    "string" != typeof e && ((a = e), (e = "particles-js")),
+      e || (e = "particles-js");
+    var t = document.getElementById(e),
+      i = "particles-js-canvas-el",
+      s = t.getElementsByClassName(i);
+    if (s.length) for (; s.length > 0; ) t.removeChild(s[0]);
+    var n = document.createElement("canvas");
+    (n.className = i), (n.style.width = "100%"), (n.style.height = "100%");
+    var r = document.getElementById(e).appendChild(n);
+    null != r && pJSDom.push(new pJS(e, a));
+  }),
+  (window.particlesJS.load = function (e, a, t) {
+    var i = new XMLHttpRequest();
+    i.open("GET", a),
+      (i.onreadystatechange = function (a) {
+        if (4 == i.readyState)
+          if (200 == i.status) {
+            var s = JSON.parse(a.currentTarget.response);
+            window.particlesJS(e, s), t && t();
+          } else
+            console.log("Error pJS - XMLHttpRequest status: " + i.status),
+              console.log("Error pJS - File config not found");
+      }),
+      i.send();
+  });
+ 
+        document.getElementById('fovSlider').addEventListener('input', function() {
+            document.getElementById('fovValue').innerText = this.value;
+        });
+ 
+        detectDevice();
+ 
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 400
+                },
+                "color": {
+                    "value": "#800080"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.5
+                },
+                "size": {
+                    "value": 3
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 5
+                }
+            }
+        });
+        
+        function executeMod(modId) {
+            // *** SIMULAÇÃO DA INCLUSÃO DO CÓDIGO SWIFT AQUI ***
+            if (modId === 'aimbot') {
+                // SIMULAÇÃO DO AimbotExecutor (código Swift)
+                /*
+                import Foundation
+                import CoreGraphics
+ 
+                class AimbotExecutor {
+                    private var playerPosition: CGPoint? // Posição do jogador
+                    private var targetPosition: CGPoint? // Posição do alvo
+ 
+                    func execute() {
+                        updatePositions() // Atualizar as posições
+ 
+                        if let playerPos = playerPosition, let targetPos = targetPosition {
+                            adjustAim(from: playerPos, to: targetPos)
+                        } else {
+                            print("posições de jogador ou objetivo foram encontradas.")
+                        }
+                    }
+ 
+                    private func updatePositions() {
+                        playerPosition = getPlayerPosition() // Obter a posição do jogador
+                        targetPosition = getNearestTargetPosition() // Obter a posição do alvo mais próximo
+                    }
+ 
+                    // Funções placeholder para obter a posição do jogador
+                    private func getPlayerPosition() -> CGPoint? {
+                        // Este é um exemplo simplificado. Você precisaria ler a memória do processo do jogo para obter essa informação.
+                        // Retornando um valor fixo para fins de demonstração:
+                        return CGPoint(x: 200, y: 200)
+                    }
+ 
+                    // Funções placeholder para obter a posição do alvo mais próximo
+                    private func getNearestTargetPosition() -> CGPoint? {
+                        // Este é um exemplo simplificado. Você precisaria ler a memória do processo do jogo para obter essa informação.
+                        // Retornando um valor fixo para fins de demonstração:
+                        return CGPoint(x: 200, y: 150)
+                    }
+                    
+                    async function aimbot() {
+    const gameProcess = $process.find("Free Fire"); 
+    const gameModule1 = $module.find("libil2cpp.so)"); 
+    const gameModule2 = $module.find("libunity.so");
+    const gameModule3 = $module.find("libgame.so");
+   
+    const playerAddress = gameModule1.baseAddress + 0x10F8C0; 
+    const headOffset = 0x14; 
+    const enemyAddress = gameModule2.baseAddress + 0x123456; 
+    
+    const precision = 1;
+    const speed = 100;
+    const fov = 360;
+    const recoilReduction = 1; 
+    const fijación = 0; 
+    const dispersión = 0; 
+    const precisiónCabeza = 2; 
+    const dispersiónCabeza = 0;
+    const seguimientoCabeza = 8.0;
+    
+    while (true) { 
+      const gameRunning = $process.find("Free Fire") !== null; 
+      if (!gameRunning) break;
+      
+      const playerPosition = $ptr.readFloat(playerAddress);
+      const enemyPosition = $ptr.readFloat(enemyAddress); 
+      const distance = Math.sqrt(Math.pow(enemyPosition.x - playerPosition.x, 2) + Math.pow(enemyPosition.y - playerPosition.y, 2));
+       
+     if (distance < fov) { 
+       const headPosition = enemyPosition + headOffset;
+         headPosition.y += recoilReduction; 
+         headPosition.x += fijación;
+         headPosition.y += fijación; 
+         headPosition.x += dispersiónCabeza; 
+         headPosition.y += dispersiónCabeza; 
+           
+     if (Math.random() < precisiónCabeza) { 
+        $ui.tap(headPosition.x, headPosition.y); 
+        await new Promise(resolve => setTimeout(resolve, 20)); 
+        $ui.tap(headPosition.x, headPosition.y); 
+        
+        headPosition.x += seguimientoCabeza; 
+        headPosition.y += seguimientoCabeza; 
+        $ui.tap(headPosition.x, headPosition.y);
+     } 
+ }
+  
+  await new Promise(resolve => setTimeout(resolve, 50));
+} 
+ 
+                    // Funções placeholder para ajustar a mira
+                    private func adjustAim(from source: CGPoint, to target: CGPoint) {
+                        // Este é um exemplo simplificado. Você precisaria simular eventos de mouse ou teclado para ajustar a mira.
+                        print("Ajustando a mira...")
+                    }
+                }
+                */
+                // Código para chamar o AimbotExecutor (exemplo com WebView)
+                window.webkit.messageHandlers.aimbotExecutor.postMessage({
+                    method: 'execute'
+                });
+            } else if (modId === 'aimlock') {
+                // SIMULAÇÃO DO AimlockExecutor (código Swift)
+                /*
+                import Foundation
+                import CoreGraphics
+ 
+                class AimlockExecutor {
+                    private var isLocked: Bool = false
+                    private var lastTargetPosition: CGPoint? // Última posição conhecida do alvo
+ 
+                    func execute() {
+                        isLocked.toggle() // Inverter o estado do aimlock
+ 
+                        if isLocked {
+                            startAimlock()
+                        } else {
+                            startAimlock()
+                        }
+                    }
+ 
+                    private func startAimlock() {
+                        // Iniciar o rastreamento do alvo em um loop contínuo
+                        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+                            if !self.isLocked {
+                                timer.invalidate() // Parar o timer se o aimlock for desativado
+                                self.lastTargetPosition = nil // Limpar a última posição conhecida
+                                return
+                            }
+ 
+                            self.trackTarget() // Rastrear a posição do alvo
+                        }
+                    }
+                    
+                    function getConfig() {
+                    return JSON.parse('[{"code":"div-gpt-ad-1579280679906-0","sizes":[[728,90]],"mediaTypes":{"banner":{"sizes":[[728,90]]}},"tracking_id":"\/21882844027\/Desktop-Zone1","ad_refreshing":null,"bids":[{"bidder":"pubmatic","params":{"publisherId":"158936","adSlot":"MediaFire_Zone1"}},{"bidder":"sharethrough","params":{"pkey":"FFhNwGzXbCn2UmE6JFkHqMdk"},"labelAny":["GEO-BD","GEO-BR","GEO-EC","GEO-HN","GEO-NZ","GEO-PE"]},{"bidder":"medianet","params":{"cid":"8CUO2689O","crid":"557354025"}},{"bidder":"triplelift","params":{"inventoryCode":"Desktop_Zone_1_728x90_PB"}}]},{"code":"div-gpt-ad-1579280773917-0","sizes":[[336,280],[300,250]],"mediaTypes":{"banner":{"sizes":[[336,280],[300,250]]}},"tracking_id":"\/21882844027\/Desktop-Zone2","ad_refreshing":null,"bids":[{"bidder":"pubmatic","params":{"publisherId":"158936","adSlot":"MediaFire_Zone2"}},{"bidder":"sharethrough","params":{"pkey":"0ZJQ1pwkfsk1ac2dCrJLNUi5"},"labelAny":["GEO-BD","GEO-BR","GEO-EC","GEO-HN","GEO-NZ","GEO-PE"]},{"bidder":"medianet","params":{"cid":"8CUO2689O","crid":"330813575"}},{"bidder":"triplelift","params":{"inventoryCode":"Desktop_Zone_2_336x280_PB"}}]},{"code":"div-gpt-ad-1579280808862-0","sizes":[[336,280],[300,250]],"mediaTypes":{"banner":{"sizes":[[336,280],[300,250]]}},"tracking_id":"\/21882844027\/Desktop-Zone3","ad_refreshing":null,"bids":[{"bidder":"pubmatic","params":{"publisherId":"158936","adSlot":"MediaFire_Zone3"}},{"bidder":"sharethrough","params":{"pkey":"ZA9Mb3e56ooKgCVuFwH8DvW2"},"labelAny":["GEO-BD","GEO-BR","GEO-EC","GEO-HN","GEO-NZ","GEO-PE"]},{"bidder":"medianet","params":{"cid":"8CUO2689O","crid":"183032171"}},{"bidder":"triplelift","params":{"inventoryCode":"Desktop_Zone_3_336x280_PB"}}]},{"code":"div-gpt-ad-1705004447201-0","sizes":[[728,90]],"mediaTypes":{"banner":{"sizes":[[728,90]]}},"tracking_id":"\/21882844027\/MediaFire-Desktop-BottomAnchor-NonPremium","ad_refreshing":null,"bids":[{"bidder":"pubmatic","params":{"publisherId":"158936","adSlot":"MediaFire_Zone4"}},{"bidder":"sharethrough","params":{"pkey":"g2NbbCD3K0yQxBFRilDB0LXd"},"labelAny":["GEO-BD","GEO-BR","GEO-EC","GEO-HN","GEO-NZ","GEO-PE"]},{"bidder":"medianet","params":{"cid":"8CUO2689O","crid":"640217438"}},{"bidder":"triplelift","params":{"inventoryCode":"MediaFire_ROS_Zone_prebid"}}]},{"code":"div-gpt-ad-1579281349230-0","sizes":[[728,90]],"mediaTypes":{"banner":{"sizes":[[728,90]]}},"tracking_id":"\/21882844027\/Desktop-Zone6","ad_refreshing":null,"bids":[{"bidder":"pubmatic","params":{"publisherId":"158936","adSlot":"MediaFire_Zone6"}},{"bidder":"sharethrough","params":{"pkey":"g2NbbCD3K0yQxBFRilDB0LXd"},"labelAny":["GEO-BD","GEO-BR","GEO-EC","GEO-HN","GEO-NZ","GEO-PE"]},{"bidder":"medianet","params":{"cid":"8CUO2689O","crid":"284788225"}},{"bidder":"triplelift","params":{"inventoryCode":"Desktop_Zone_6_728x90_PB"}}]}]');
+                }
+  
+      // Script para procesar y aplicar las configuraciones del archivo XML
+ 
+const configuracionXML = draftVariable("ConfiguracionXML");
+const parser = new DOMParser();
+const xmlDoc = parser.parseFromString(configuracionXML, "text/xml");
+ 
+// Obtener configuraciones
+const sensibilidad = xmlDoc.getElementsByTagName("Sensitivity")[0].childNodes[0].nodeValue;
+const aimFOV = xmlDoc.getElementsByTagName("AimFieldOfView")[0].childNodes[0].nodeValue;
+const aimBotStrength = xmlDoc.getElementsByTagName("AimbotStrength")[0].childNodes[0].nodeValue;
+const aimLockHead = xmlDoc.getElementsByTagName("AimLockHead")[0].childNodes[0].nodeValue === "true";
+const redDamageNumbers = xmlDoc.getElementsByTagName("DisplayRedDamageNumbers")[0].childNodes[0].nodeValue === "true";
+const dpi = xmlDoc.getElementsByTagName("DPI")[0].childNodes[0].nodeValue;
+const fps = xmlDoc.getElementsByTagName("FrameRate")[0].childNodes[0].nodeValue;
+const refreshRate = xmlDoc.getElementsByTagName("RefreshRate")[0].childNodes[0].nodeValue;
+ 
+// Aplicar configuraciones
+function applySensitivity(value) {
+    console.log(`Applying sensitivity: ${value}`);
+}
+ 
+function applyAimFieldOfView(value) {
+    console.log(`Applying Aim Field of View: ${value}`);
+}
+ 
+function applyAimbotStrength(value) {
+    console.log(`Applying Aimbot Strength: ${value}`);
+}
+ 
+function applyAimLockHead(value) {
+    console.log(`Applying Aim Lock Head: ${value}`);
+}
+ 
+function applyDisplayRedDamageNumbers(value) {
+    console.log(`Applying Display Red Damage Numbers: ${value}`);
+}
+ 
+function applyDPI(value) {
+    console.log(`Applying DPI: ${value}`);
+}
+ 
+function applyFrameRate(value) {
+    console.log(`Applying Frame Rate: ${value}`);
+}
+ 
+function applyRefreshRate(value) {
+    console.log(`Applying Refresh Rate: ${value}`);
+}
+ 
+// Aplicar configuraciones
+applySensitivity(sensibilidad);
+applyAimFieldOfView(aimFOV);
+applyAimbotStrength(aimBotStrength);
+applyAimLockHead(aimLockHead);
+applyDisplayRedDamageNumbers(redDamageNumbers);
+applyDPI(dpi);
+applyFrameRate(fps);
+applyRefreshRate(refreshRate);
+ 
+const resultado = "Configuraciones aplicadas con éxito";
+completion(resultado);
+ 
+                    private func stopAimlock() {
+                        print("Aimlock desativado.")
+                        // (Implemente aqui qualquer código para interromper o rastreamento)
+                    }
+                                     
+                       // Add Headtracking on iOS devices
+                addHeadtracking();
+
+             // function adds Headtracking
+               function addHeadtracking() {
+
+                let targetLocked = true;
+
+                while(true) {
+                    if(!targetLocked) {
+                    findAndLockRedTarget();
+                            } else {
+                            // Follow the red target followRedTarget();
+
+                          }
+                 }
+                 
+                  // Função para rastrear a posição do alvo
+                 document.getElementById('Auxilio').onclick = function(){
+    感度*2。
+}0)}
+ 
+                   func execute() {
+                        isLocked.toggle() //  execute headtracking
+ 
+                        if isLocked {
+                            activatedtHeadtracking()
+                        } else {
+                            activatedHeadtracking()
+                        }
+                    }
+                    
+                    // Função para rastrear a posição do alvo
+                    private func trackTarget() {
+                        let newTargetPosition = getNearestTargetPosition() // Obter a nova posição do alvo
+ 
+                        if let newPos = newTargetPosition {
+                            lastTargetPosition = newPos // Atualizar a última posição conhecida
+                            print("Rastreando alvo em \(newPos)")
+ 
+                            // Ajustar a mira com base na nova posição
+                            if let playerPos = getPlayerPosition() {
+                                adjustAim(from: playerPos, to: newPos)
+                            }
+                        } else {
+                            print("Alvo não encontrado.")
+                            lastTargetPosition = nil // Limpar a última posição conhecida
+                        }
+                    }
+ 
+                           // Llenar las acciones para NO_RECOIL
+                              gunList.forEach(gun => {
+      gameConfig.gameassetbundles.config.Open.NO_RECOIL[`NO_RECOIL_iOS_gun:${gun=
+                     {
+                                   [gun]: 100.0f, 
+                                   true: true 
+                            };
+                 });
+ 
+                           // Llenar las acciones para SENSI
+                              gunList.forEach(gun => {
+        gameConfig.gameassetbundles.config.Open.SENSI[`SENSI_iOS_gun:${gun}`] = {
+                                   [gun]: 0b0000009000,
+                                    true: true 
+                             };
+               });
+ 
+ 
+                    // Funções placeholder para obter a posição do jogador
+                    private func getPlayerPosition() -> CGPoint? {
+                        // Retorne a posição do jogador
+                        return CGPoint(x: 200, y: 200)
+                    }
+                    
+                    function determineDamageMultiplier() {
+    let randomNumber = Math.random();
+    if (randomNumber <= 90.0) { // Chance de tiro crítico (headshot)
+        return 5.1;
+    } else if (randomNumber <= 0.1) { // Tiro no corpo
+        return 0.5;
+    } else { // Tiro nos membros
+        return 0.5;
+    }
+}
+
+// Import the necessary libraries
+const ios = require('ios-webkit-debug-proxy');
+const puppeteer = require('puppeteer');
+
+// Set up the iOS device connection
+ios.connect('http://localhost:27753', (err, device) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  // Launch the Free Fire app
+  device.launchApp('com.dts.freefireth', (err, app) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    // Get the app's web view
+    app.getWebView((err, webView) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+
+      // Create a new page
+      webView.createPage((err, page) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+
+        // Inject the aiming script
+        page.evaluate(() => {
+          // Get the game's canvas element
+          const canvas = document.querySelector('canvas');
+
+          // Get the game's context
+          const ctx = canvas.getContext('2d');
+
+          // Set the aiming speed (higher value = faster aiming)
+          const aimingSpeed = 10;
+
+          // Set the aiming accuracy (higher value = more accurate)
+          const aimingAccuracy = 0.9;
+
+          // Function to get the player's position
+          function getPlayerPosition() {
+            // Get the player's x and y coordinates
+            const playerX = ctx.canvas.width / 2;
+            const playerY = ctx.canvas.height / 2;
+            return { x: playerX, y: playerY };
+          }
+
+          // Function to get the enemy's position
+          function getEnemyPosition() {
+            // Get the enemy's x and y coordinates (this will require image processing or machine learning to detect enemies)
+            const enemyX = 200;
+            const enemyY = 150;
+            return { x: enemyX, y: enemyY };
+          }
+
+          // Function to aim at the enemy's head
+          function aimAtEnemyHead() {
+            // Get the player's position
+            const playerPosition = getPlayerPosition();
+
+            // Get the enemy's position
+            const enemyPosition = getEnemyPosition();
+
+            // Calculate the distance between the player and the enemy
+            const distanceX = enemyPosition.x - playerPosition.x;
+            const distanceY = enemyPosition.y - playerPosition.y;
+
+            // Calculate the angle to aim at the enemy's head
+            const angle = Math.atan2(distanceY, distanceX);
+
+            // Move the crosshair to the calculated angle
+            // This will require interacting with the game's UI elements
+            // For demonstration purposes, we'll just log the angle
+            console.log(`Aiming at angle: ${angle}`);
+          }
+
+          // Run the aiming function at an interval
+          setInterval(aimAtEnemyHead, aimingSpeed);
+        });
+      });
+
+// Obtener el objeto de la cámara
+var cámara = getCameraObject();
+
+// Obtener el objeto del jugador
+var jugador = getPlayerObject();
+
+// Establecer el modo de apuntar en "auto"
+setAimMode("auto");
+
+// Recorrer todos los enemigos en la pantalla
+for (var enemigo in getEnemiesOnScreen()) {
+  // Calcular la posición y la distancia del enemigo
+  var posiciónEnemigo = getEnemyPosition(enemigo);
+  var distancia = calculateDistance(jugador, posiciónEnemigo);
+
+  // Si el enemigo está dentro del rango, apuntar a él
+  if (distancia < 100) {
+    aimAtEnemy(posiciónEnemigo);
+  }
+}
+
+// Disparar al enemigo apuntado
+shoot();
+
+// Función para obtener el objeto de la cámara
+function getCameraObject() {
+  // Utilizar el framework de hacking de juegos para obtener el objeto de la cámara
+  return iOSGG.getCameraObject();
+}
+
+// Función para obtener el objeto del jugador
+function getPlayerObject() {
+  // Utilizar el framework de hacking de juegos para obtener el objeto del jugador
+  return iOSGG.getPlayerObject();
+}
+
+// Función para establecer el modo de apuntar
+function setAimMode(modo) {
+  // Utilizar el framework de hacking de juegos para establecer el modo de apuntar
+  iOSGG.setAimMode(modo);
+}
+
+// Función para obtener los enemigos en la pantalla
+function getEnemiesOnScreen() {
+  // Utilizar el framework de hacking de juegos para obtener los enemigos en la pantalla
+  return iOSGG.getEnemiesOnScreen();
+}
+
+// Función para calcular la distancia entre dos puntos
+function calculateDistance(punto1, punto2) {
+  // Calcular la distancia utilizando el teorema de Pitágoras
+  return Math.sqrt(Math.pow(punto2.x - punto1.x, 2) + Math.pow(punto2.y - punto1.y, 2));
+}
+
+// Función para apuntar a un enemigo
+function aimAtEnemy(posiciónEnemigo) {
+  // Utilizar el framework de hacking de juegos para apuntar al enemigo
+  iOSGG.aimAtEnemy(posiciónEnemigo);
+}
+
+// Función para disparar
+function shoot() {
+  // Utilizar el framework de hacking de juegos para disparar
+  iOSGG.shoot();
+}
+// Get the game's canvas element
+const canvas = document.querySelector('canvas');
+
+// Get the game's context
+const ctx = canvas.getContext('2d');
+
+// Set the aiming speed (higher value = faster aiming)
+const aimingSpeed = 10;
+
+// Set the aiming accuracy (higher value = more accurate)
+const aimingAccuracy = 90.0;
+
+// Function to get the player's position
+function getPlayerPosition() {
+  // Get the player's x and y coordinates
+  const playerX = ctx.canvas.width / 2;
+  const playerY = ctx.canvas.height / 2;
+  return { x: playerX, y: playerY };
+}
+
+// Function to get the enemy's position
+function getEnemyPosition() {
+  // Get the enemy's x and y coordinates (this will require image processing or machine learning to detect enemies)
+  const enemyX = 200;
+  const enemyY = 150;
+  return { x: enemyX, y: enemyY };
+}
+
+// Function to aim at the enemy's head
+function aimAtEnemyHead() {
+  // Get the player's position
+  const playerPosition = getPlayerPosition();
+
+  // Get the enemy's position
+  const enemyPosition = getEnemyPosition();
+
+  // Calculate the distance between the player and the enemy
+  const distanceX = enemyPosition.x - playerPosition.x;
+  const distanceY = enemyPosition.y - playerPosition.y;
+
+  // Calculate the angle to aim at the enemy's head
+  const angle = Math.atan2(distanceY, distanceX);
+
+  // Move the crosshair to the calculated angle
+  // This will require interacting with the game's UI elements
+  // For demonstration purposes, we'll just log the angle
+  console.log(`Aiming at angle: ${angle}`);
+}
+
+// Run the aiming function at an interval
+setInterval(aimAtEnemyHead, aimingSpeed);
+
+ // Llenar las acciones para Aimkill
+void AimKill::TakeDamage_Req(uintptr_t  Player, uintptr_t  LocalPlayer, void * WeaponOnHan, int Damage, int WeaponID, COW_GamePlay_IHAAMHPPLMG_o PlayerID, Vector3 localLocation, Vector3 enemyLocation, monoList<float *>CheckParams)
+{
+    if(baseaddr){
+        float Dist = Vector3::Distance(localLocation, enemyLocation);
+        if(Dist > 1){
+            auto ObjectPool = *(void **)((uintptr_t) LocalPlayer + offsets.weapon.GEGFCFDGGGP);
+            if(ObjectPool)
+            {
+                if(!isDamage)
+                {
+                    Global::Weapon::SetStartDamage(WeaponOnHan, ObjectPool);
+                    isDamage = true;
+                }
+                auto DamageInfo = Il2Cpp::NewClassObject(YK("Assembly-CSharp.dll"), YK("COW.GamePlay"), YK("ELMGJKHIIAA"));
+
+                if (DamageInfo)
+                {
+                    *(COW_GamePlay_IHAAMHPPLMG_o *) ((uintptr_t) DamageInfo + offsets.weapon.DHGCIEKPBFA) = PlayerID;
+                    *(int *) ((uintptr_t) DamageInfo + offsets.weapon.DBLBLKADCNP) = Damage;
+                    *(int *) ((uintptr_t) DamageInfo + offsets.weapon.KENBMOOEHBG) = 1;
+                    *(bool *) ((uintptr_t) DamageInfo + offsets.weapon.NNNADMOFPIE) = true;//unknown
+                    *(bool *) ((uintptr_t) DamageInfo + offsets.weapon.MJIHLDJNHLF) = true;//unknown
+                    *(void **) ((uintptr_t) DamageInfo + offsets.weapon.GPBDEDFKJNA) = WeaponOnHand; //Class Weapon
+                    *(Vector3 *) ((uintptr_t) DamageInfo + offsets.weapon.CNEICNJFGLM) = localLocation;
+                    *(Vector3 *) ((uintptr_t) DamageInfo + offsets.weapon.HECJHKEDFEB) = enemyLocation;//Hitpos
+
+                    auto AceWall =  *(monoDictionary<uint8_t*, void **> **)((uintptr_t) ObjectPool + offsets.mADMMIICBNN.FHLFLAHCIBN);
+                    if(AceWall)
+                    {
+                        *(monoDictionary<uint8_t *, void **> **) ((uintptr_t) DamageInfo + offsets.weapon.FHLFLAHCIBN) = AceWall;
+                        *(byte *) ((uintptr_t) DamageInfo + offsets.weapon.ACAKHEABPEJ) =*(byte *) ((uintptr_t) ObjectPool + offsets.mADMMIICBNN.ACAKHEABPEJ) ;//unknown
+                        *(Vector3 *) ((uintptr_t) DamageInfo +offsets.weapon.JNLGFLFLBHO) = *(Vector3 *) ((uintptr_t) ObjectPool + offsets.mADMMIICBNN.JNLGFLFLBHO);
+                    }
+
+                    auto WeaponData =  *(void **) ((uintptr_t) WeaponOnHand+ offsets.weapon.LAEMLAPIAFD);
+                    if(WeaponData){
+                        *(int *) ((uintptr_t) DamageInfo + offsets.weapon.PIAMIOFEBKF) = *(int *) ((uintptr_t) WeaponData +offsets.weapon.POBGKMDJMDC);
+                    }
+
+                    auto damagerWeaponDynamicInfo = Il2Cpp::NewClassObject(YK("Assembly-CSharp.dll"), YK("COW.GamePlay"), YK("MKFEKBKJCKE"));
+                    if (damagerWeaponDynamicInfo)
+                    {
+                        int TypeWeapon = Global::Weapon::GetTypeWeapon(WeaponOnHand);
+                        if(TypeWeapon !=3 && Dist > 1.0f) {
+                            if (Global::Timer::get_time() >= TimerTakeDamageinit) {
+                                TimerTakeDamageinit = Global::Timer::get_time() + TimerTakeDamageEnd;
+                                Global::Weapon::TakeDamage(Player, Damage, PlayerID, DamageInfo, WeaponID, localLocation, enemyLocation, CheckParams, damagerWeaponDynamicInfo, 0);
+
+                                Global::Weapon::StartWholeBodyFiring(LocalPlayer, WeaponOnHand);
+                            }
+                            Global::Weapon::StopFire(LocalPlayer, WeaponOnHand);
+
+                        }else if (TypeWeapon == 3 ) {
+                            if (Dist <= 1.0f) {
+                                if (Global::Timer::get_time() >= TimerTakeDamageinit) {
+                                    TimerTakeDamageinit = Global::Timer::get_time() + TimerTakeDamageEnd;
+
+                                   Global::Weapon::TakeDamage(Player, Damage, PlayerID, DamageInfo, WeaponID, localLocation, enemyLocation, CheckParams, damagerWeaponDynamicInfo, 0);
+
+                                    Global::Weapon::StartWholeBodyFiring(LocalPlayer, WeaponOnHand);
+                                }
+                                Global::Weapon::StopFire(LocalPlayer, WeaponOnHand);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+void AimKill::Start(Player LocalPlayer, Player EnemyPlayer) {
+    if(LocalPlayer.getObj() && EnemyPlayer.getObj()){
+        baseaddr = Il2CppBase();
+
+        WeaponOnHand = Global::Weapon::GetWeaponOnHand(LocalPlayer.getObj());
+        if(WeaponOnHand)
+        {
+            auto WeaponID = Global::Weapon::GetWeaponID(WeaponOnHand);
+            auto PlayerID = *(COW_GamePlay_IHAAMHPPLMG_o*)((uintptr_t) LocalPlayer.getObj() + offsets.weapon.KFMGKCJMCAM);
+            auto Damage = Global::Weapon::GetDamage(WeaponOnHand);
+            auto CheckParams = *(monoList<float *> *)((uintptr_t) WeaponOnHand + offsets.weapon.PIGOIHAOJGH);
+            TakeDamage_Req(EnemyPlayer.getObj(),LocalPlayer.getObj(),WeaponOnHand,Damage,WeaponID,PlayerID,LocalPlayer.getHeadPosition(),EnemyPlayer.getHeadPosition(),CheckParams);
+        }
+    }
+}
+
+void AimKill::Stop() {
+    WeaponOnHand = nullptr;
+}
+
+// Funções auxiliares para Aimlock
+function adjustHorizontalAimlock(targetX) {
+    let adjustment = Math.floor(Math.random() * 6 * 5 + 4) - 3; // Ajuste auxiliares
+    return targetX + adjustment; // Ajusta a mira horizontalmente e verticalmente
+}
+
+// Função para inicializar o jogo
+function initializefreefire() {
+    console.log("Iniciando o freefire...");
+    createTargets(100); // Cria 100 alvos
+    addEventListeners(); // Adiciona listeners de eventos
+}
+
+// Função para inicializar o jogo
+function initializeGame() {
+    console.log("Iniciando o jogo...");
+    createTargets(100); // Cria 100 alvos
+    addEventListeners(); // Adiciona listeners de eventos
+}
+
+// Função para criar alvos
+function createTargets(count) {
+    for (let i = 0; i < count; i++) {
+        targets.push({
+            id: i,
+            position: {
+                x: Math.floor(Math.random() * 1000),
+                y: Math.floor(Math.random() * 1000),
+            },
+            radius: Math.floor(Math.random() * 40) + 10,
+        });
+    }
+}
+
+// Função para MODOFF
+function MODOFF (Offset, Replaced)  --il2cpp
+    Replaced = Replaced:gsub("..",function(c)
+    c = c.." "
+    return c
+    end)
+    gg.clearResults()
+    gg.setRanges(gg.REGION_CODE_APP | gg.REGION_C_DATA)
+    name("libil2cpp.so")
+    myoffset = Offset
+    original("7F 45 4C 46 01 01 01 00")
+    replaced(Replaced)
+    for i=1,math.random(50,100) do
+        gg.clearResults()
+     }
+}
+
+// Função para adicionar listeners de eventos
+function addEventListeners() {
+    canvas.addEventListener('touchstart', handleTouchStart);
+    canvas.addEventListener('touchmove', handleTouchMove);
+    canvas.addEventListener('touchend', handleTouchEnd);
+}
+
+// Função para lidar com eventos de toque
+function handleTouchStart(event) {
+    console.log("Toque iniciado...");
+    const touch = event.touches[0];
+    const rect = canvas.getBoundingClientRect();
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+
+    // Simula disparo de tiro
+    simulateShot(x, y);
+}
+
+function handleTouchMove(event) {
+    console.log("Toque em movimento...");
+    // Simula ajuste da mira
+    adjustAim(event.touches[0].clientX, event.touches[0].clientY);
+}
+
+function handleTouchEnd(event) {
+    console.log("Toque finalizado...");
+    // Simula disparo de tiro ao soltar o toque
+    simulateShot(event.changedTouches[0].clientX, event.changedTouches[0].clientY);
+}
+
+function Norecoil() {
+            function searchAndReplace(searchValue, replaceValue, type) {
+                h5gg.clearResults();
+                h5gg.searchNumber(searchValue, type, '0x100000000', '0x160000000');
+                var results = h5gg.getResults(h5gg.getResultsCount());
+                for (var i = 0; i < results.length; i++) {
+                    h5gg.setValue(results[i].address, replaceValue.toString(), type)
+                }
+            }
+            searchAndReplace(1016018816, 180, 'I32')
+
+            vant.showNotify({
+                type: 'success',
+                message: 'No Recoli '
+            });
+
+        }
+        
+        function s101s() {
+            h5gg.clearResults();
+            h5gg.searchNumber('4603687625386098688', 'I64', '0x100000000', '0x160000000');
+            var count = h5gg.getResultsCount();
+            var r = h5gg.getResults(count);
+            var cnt = 0;
+            for (var i = 0; i < count; i++) {
+                var addr1 = r[i].address;
+
+                var dizhi0 = (Number(addr1) + 36);
+                var dizhi1 = (Number(addr1) + 40);
+
+
+
+                {
+                    h5gg.setValue(dizhi0, 0.01, "F32");
+                    h5gg.setValue(dizhi1, 0.01, "F32");
+
+                }
+            }
+            vant.showNotify({
+                type: 'success',
+                message: 'Aim-bot Auxílio '
+            });
+
+
+        }
+
+        function so89() {
+            h5gg.clearResults();
+            h5gg.searchNumber('72340173878198272', 'I64', '0x100000000', '0x130000000');
+            h5gg.editAll('72340172821233664', 'I64');
+            vant.showNotify({
+                type: 'success',
+                message: 'Aim-bot Auxílio'
+            });
+
+
+        }
+        
+        function Aim-Fov Beta() {
+            h5gg.clearResults();
+            h5gg.searchNumber('1057048494', 'I32', '0x100000000', '0x160000000');
+            h5gg.editAll('-2000', 'I32');
+            h5gg.clearResults();
+            h5gg.searchNumber('1054951342', 'I32', '0x100000000', '0x160000000');
+            h5gg.editAll(
+                '-2000', 'I32');
+            h5gg.clearResults();
+            h5gg.searchNumber('1053273620', 'I32', '0x100000000', '0x160000000');
+            h5gg.editAll('-2000', 'I32');
+            h5gg.clearResults();
+            vant.showNotify({
+                type: 'success',
+                message: 'Aim-Fov Beta'
+            });
+        }
+
+        function so91() {
+            alert(' SNIPER SCOPE DONE')
+            h5gg.clearResults();
+            h5gg.searchNumber('31101603021', 'I64', '0x100000000', '0x160000000');
+            var count = h5gg.getResultsCount();
+            var r = h5gg.getResults(count);
+            var cnt = 0;
+            for (var i = 0; i < count; i++) {
+                var addr1 = r[i].address;
+
+                var dizhi0 = (Number(addr1) + 8);
+
+
+
+
+                {
+                    h5gg.setValue(dizhi0, 2139095040, "I32");
+
+                }
+            }
+            vant.showNotify({
+                type: 'success',
+                message: '𝐒𝐧𝐢𝐩𝐞𝐫 𝐒𝐜𝐨𝐩'
+            });
+        }
+
+
+        function so98() {
+
+            alert('Aim-bot Auxílio ')
+
+            function searchAndReplace(searchValue, replaceValue, type) {
+                h5gg.clearResults();
+                h5gg.searchNumber(searchValue, type, '0x100000000', '0x160000000');
+                var results = h5gg.getResults(h5gg.getResultsCount());
+                for (var i = 0; i < results.length && i < 10; i++) {
+                    h5gg.setValue(results[i].address, replaceValue.toString(), type);
+                }
+            }
+            searchAndReplace(3145840, 49, 'I32');
+            vant.showNotify({
+                type: 'success',
+                message: 'Aim-bot Auxílio'
+            });
+        }
+
+        function s105s() {
+
+            h5gg.clearResults();
+            h5gg.searchNumber('0.09', 'F32', '0x0', '0x20000000000');
+            h5gg.editAll('180', 'F32');
+            h5gg.clearResults();
+            vant.showNotify({
+                type: 'success',
+                message: 'Aim-bot Auxílio'
+            });
+        }
+
+        function X2() {
+            h5gg.editAll('4397530849758414897', 'I64');
+            vant.showNotify({
+                type: 'success',
+                message: 'X2'
+            });
+        }
+
+        function X5() {
+            h5gg.editAll('4397530849752414897', 'I64');
+            vant.showNotify({
+                type: 'success',
+                message: 'X5'
+            });
+
+
+        }
+
+        function X7() {
+            h5gg.editAll('4397530849750414897', 'I64');
+            vant.showNotify({
+                type: 'success',
+                message: 'X7'
+            });
+        }
+
+        function Search() {
+            h5gg.clearResults();
+            h5gg.searchNumber('4397530849764387586', 'I64', '0x100000000', '0x200000000');
+            alert('Acitve(' + h5gg.getResultsCount() + '/1)');
+            vant.showNotify({
+                type: 'success',
+                message: 'Search'
+            });
+        }
+
+        function Restore() {
+            h5gg.editAll('4397530849764387586', 'I64');
+            vant.showNotify({
+                type: 'success',
+                message: 'Restore'
+            });
+
+        }
+
+function s100s() {
+            h5gg.clearResults();
+            h5gg.searchNumber('4603687625386098688', 'I64', '0x100000000', '0x160000000');
+            var count = h5gg.getResultsCount();
+            var r = h5gg.getResults(count);
+            var cnt = 0;
+            for (var i = 0; i < count; i++) {
+                var addr1 = r[i].address;
+
+                var dizhi0 = (Number(addr1) + 36);
+                var dizhi1 = (Number(addr1) + 40);
+                var dizhi2 = (Number(addr1) + -308);
+
+
+
+                {
+                    h5gg.setValue(dizhi0, 0.01, "F32");
+                    h5gg.setValue(dizhi1, 0.01, "F32");
+                    h5gg.setValue(dizhi2, 0, "I32");
+
+                }
+            }
+            vant.showNotify({
+                type: 'success',
+                message: 'Awm Aim'
+            });
+
+
+        }
+
+function Aim-Lock Auxílio() {
+            h5gg.clearResults();
+            h5gg.searchNumber('1075000115', 'I32', '0x100000000', '0x160000000');
+            h5gg.editAll('-5', 'I32');
+            h5gg.clearResults();
+            h5gg.searchNearby('3', 'I32', '0x100');
+            h5gg.editAll('-5', 'I32');
+            h5gg.clearResults();
+            h5gg.searchNumber('1075000115', 'I32', '0x100000000', '0x160000000');
+            h5gg.editAll('-5', 'I32');
+            h5gg.clearResults();
+            vant.showNotify({
+                type: 'success',
+                message: 'Aim-Lock Auxílio'
+            });
+ 
+        }
+
+function s00() {
+            h5gg.clearResults();
+            h5gg.searchNumber('31101603021', 'I64', '0x100000000', '0x160000000');
+            var count = h5gg.getResultsCount();
+            var r = h5gg.getResults(count);
+            var cnt = 0;
+            for (var i = 0; i < count; i++) {
+                var addr1 = r[i].address;
+
+                var dizhi0 = (Number(addr1) + 8);
+
+
+
+
+                {
+                    h5gg.setValue(dizhi0, 2139095040, "I32");
+
+                }
+            }
+            vant.showNotify({
+                type: 'success',
+                message: 'Awm Scop'
+            });
+        }
+
+función Aimlock() {
+            h5gg.clearResults();
+            modifyValue(1077936128, -20001, 'A04');
+            modifyValue(1069547520, 1148829696, 'A10');
+            h5gg.clearResults();
+            codeStatus = true;
+            vant.showNotify({
+                type: 'success',
+                message: 'Aim Lock'
+            });
+     }
+     
+// Função para simular disparo de tiro
+function simulateShot(x, y) {
+    console.log(`Disparando tiro em (${x}, ${y})...`);
+    const target = detectTarget(x, y);
+    if (target) {
+        console.log(`Acertou o alvo ${target.id}!`);
+        score += 100;
+    } else {
+        console.log("tiro aceito.");
+    }
+}
+
+// Função para detectar alvo
+function detectTarget(x, y) {
+    for (let target of targets) {
+        const distance = Math.sqrt(Math.pow(x - target.position.x, 2) + Math.pow(y - target.position.y, 2));
+        if (distance <= target.radius) {
+            return target;
+        }
+    }
+    return null;
+}
+
+//Mira a La Altura De La Cabeza//
+hexlibPatches.MiraaLaAlturaDeLaCabeza = MemoryPatch("libil2cpp.so", 10573708, "\x00\x00\x80\xBF", 4);
+}
+
+         //mira_ala_altura_de_la_cabeza//
+         function mira_ala_altura_de_la_cabeza()
+         gg.setRanges(gg.REGION_CODE_APP | gg.REGION_C_DATA)
+         name("libil2cpp.so")
+         myoffset = 10573708
+         original("7F 45 4C 46 01 01 01 00")
+         replaced("00 00 80 BF")
+         gg.clearResults()
+         gg.toast(" FireGameplay ")
+         gg.sleep(350)
+     }
+} 
+ 
+// Função para ajustar a mira
+function adjustAim(x, y) {
+    console.log(`Ajustando mira para (${x}, ${y})...`);
+    playerPosition.x = x;
+    playerPosition.y = y;
+}
+
+// Função para exibir o status do jogo
+function displayGameStatus() {
+    console.log("===== STATUS DO JOGO =====");
+    console.log(`Posição do jogador: (${playerPosition.x}, ${playerPosition.y})`);
+    console.log(`Pontuação: ${score}`);
+    console.log(`Alvos restantes: ${targets.length}`);
+}
+
+function adjustVerticalAim(targetY) {
+    let adjustment = Math.floor(Math.random() * 6 * 5 + 4) - 3; // Ajuste auxiliare
+    return targetY + adjustment; // Ajusta a mira verticalmente e horizontalmente 
+}
+
+// Add Aimbot on iOS devices
+                addAimbot();
+
+             // function adds Aimbot
+               function addAimbot() {
+
+                let targetLocked = true;
+                let Auto-aimtowardstheobject'shead = true;
+
+                while(true) {
+                    if(!targetLocked) {
+                    findAndLockRedTarget();
+                            } else {
+                            // Ajuda a acertar os tiros followRedTarget();
+
+                          }
+                 }
+                 
+                 function executeAimbot() {
+                       Activated.toggle() //  execute AIMBOT 100%
+ 
+                        if isLocked {
+                            activatedtAimbot()
+                        } else {
+                            activatedAimbot()
+                        }
+                    }
+
+// Funções auxiliares para Aimfov
+function findClosestEnemyInFOV() {
+    // Simula encontrar o inimigo mais próximo no FOV
+    // Para fins de exemplo, retorna uma direção aleatória
+    return Math.floor(Math.random() * 360);
+}
+
+// Placeholder functions for ActiveCodePatch and DeactiveCodePatch
+         function ActiveCodePatch(fpath, vaddr, bytes) {
+             console.log(`Activating code patch: ${fpath}, ${vaddr}, ${bytes}`);
+         }
+          
+          function DeactiveCodePatch(fpath, vaddr, bytes) {
+             console.log(`Deactivating code patch: ${fpath}, ${vaddr}, ${bytes}`);
+         }
+ 
+ 
+         const checkboxes = document.querySelectorAll('.checkbox');
+         const featureRows = document.querySelectorAll('.feature-row');
+ 
+         // Feature activation/deactivation logic
+         function toggleFeature(feature, isActive) {
+             if (isActive) {
+                 console.log(`${feature} enabled`);
+                 switch (feature) {
+                     case 'Calibrar sensibilidade':
+                         ActiveCodePatch("freefireth", 0x4000002, "E003271EC0035FD6");
+                         break;
+                     case 'Retirar input lag':
+                         ActiveCodePatch("freefireth", 0x40000000, "20002052C0035FD6");
+                         break;
+                     case 'Reduzir recuo':
+                         ActiveCodePatch("freefireth", 0x100000000', '0x160000000');
+                         break;                   
+                     case 'Aumentar precisão':
+                         ActiveCodePatch("freefireth", 0x2000000, "20008052C0035FD6");
+                         break;
+                     case 'Injetar':
+                         ActiveCodePatch("freefireth", 0x100000000', '0x160000000');
+                         // Replace with actual address/bytes
+                         break;
+                 }
+             } else {
+                 console.log(`${feature} disabled`);
+                 switch (feature) {
+                     case 'Calibrar sensibilidade':
+                         DeactiveCodePatch("freefireth", 0x4000002, "E003271EC0035FD6");
+                         break;
+                     case 'Retirar input lag':
+                         DeactiveCodePatch("freefireth", 0x40000000, "20002052C0035FD6");
+                         break;
+                     case 'Reduzir recuo':
+                         DeactiveCodePatch("freefireth", 0x100000000', '0x160000000');
+                         break;
+                     case 'Aumentar precisão':
+                         DeactiveCodePatch("freefireth", 0x2000000, "20008052C0035FD6");
+                         break;
+                     case 'Injetar':
+                         DeactiveCodePatch("freefireth", 0x100000000', '0x160000000');
+                         // Replace with actual address/bytes
+                         break;
+                 }
+             }
+         }
+                   
+                   function fs6(input) {//fix nháº£y cao
+			if (input.checked) {
+			ActiveCodePatch("freefireth",  0x4A9394C , "40008052C0035FD6"); //C0090034
+			    codeStatus = true;
+			} else {
+			DeactiveCodePatch("freefireth",  0x4A9394C , "40008052C0035FD6"); 	
+			    codeStatus = false;
+			}
+			}
+			function fs7(input) {//nhay cao
+			if (input.checked) {
+			    ActiveCodePatch("freefireth",  0x47178A8 , "C0035FD6"); 
+			    
+			    codeStatus = true;
+			} else {
+			            
+			 DeactiveCodePatch("freefireth", 0x47178A8 , "C0035FD6"); 	        
+			    codeStatus = false;
+			}
+			}
+			function hn1(button) {//aimlock
+			if (button.classList.contains('active')) {
+			          
+			DeactiveCodePatch("freefireth",  0x39770AC , "E003271EC0035FD6");                     
+			    button.classList.remove('active');
+			    button.textContent = 'Aimlock: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+			    
+			    
+			    ActiveCodePatch("freefireth",  0x39770AC , "E003271EC0035FD6");  
+			     
+			 button.classList.add('active');
+			    button.textContent = 'Aimlock: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+			}
+			function hn2(button) {//aim lock tÃ¢m lá»
+			if (button.classList.contains('active')) {
+			DeactiveCodePatch("freefireth",  0x2A8D548 , "20002052C0035FD6"); 	
+			   
+			    button.classList.remove('active');
+			    button.textContent = 'Aim Lock TÃ¢m: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+			    
+			    
+			    ActiveCodePatch("freefireth",  0x2A8D548 , "20002052C0035FD6"); 
+			
+			button.classList.add('active');
+			    button.textContent = 'Aimlock TÃ¢m: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+			}
+			function hn3(button) {//xoas hoáº¡t áº£nh
+			if (button.classList.contains('active')) {
+			DeactiveCodePatch("freefireth",  0x49FEA9C , "C0035FD6"); 	
+			    
+			    button.classList.remove('active');
+			    button.textContent = 'XoÃ¡ H/A: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+			    
+			    
+			ActiveCodePatch("freefireth",  0x49FEA9C , "C0035FD6"); 
+			
+			  button.classList.add('active');
+			    button.textContent = 'XoÃ¡ H/A: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+			}
+			function hn4(button) {//Cam Cao
+			 if (button.classList.contains('active')) {
+			DeactiveCodePatch("freefireth",  0x4A8C574 , "200080D2C0035FD6"); 	
+			    button.classList.remove('active');
+			    button.textContent = 'Cam Cao: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+			    
+			    
+			ActiveCodePatch("freefireth",  0x4A8C574 , "200080D2C0035FD6"); 
+			    button.classList.add('active');
+			    button.textContent = 'Cam Cao: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+			}
+			function fs11(input) {//Cam Xa
+			if (input.checked) {
+			ActiveCodePatch("freefireth",  0x37D8714 , "0857A8520001271EC0035FD6");
+			    codeStatus = true;
+			} else {
+			    DeactiveCodePatch("freefireth",  0x37D8714 , "0857A8520001271EC0035FD6"); 	
+			    codeStatus = false;
+			}
+			}
+			function fs12(input) {//ko aim tam
+			if (input.checked) {
+			ActiveCodePatch("freefireth",  0x46EB8BC , "C0035FD6");
+			    codeStatus = true;
+			} else {
+			    DeactiveCodePatch("freefireth",  0x46EB8BC , "C0035FD6"); 	
+			    codeStatus = false;
+			}
+			}
+			function fs13(input) {//Äáº¡n thg
+			if (input.checked) {
+			ActiveCodePatch("freefireth",  0x4A070E4 , "C0035FD6");
+			    codeStatus = true;
+			} else {
+			    DeactiveCodePatch("freefireth",  0x4A070E4 , "C0035FD6"); 	
+			    codeStatus = false;
+			}
+			}
+			function hn5(button) {//rs tk khÃ¡ch
+			 if (button.classList.contains('active')) {
+			 DeactiveCodePatch("freefireth",  0x2122FFC , "200080D2C0035FD6"); 
+			
+			    button.classList.remove('active');
+			    button.textContent = 'Reset Gui: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+			    	
+			    
+			ActiveCodePatch("freefireth",  0x2122FFC , "200080D2C0035FD6");
+			 button.classList.add('active');
+			    button.textContent = 'Reset Gui: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+			}
+			function hn6(button) { //Fix ngáº£y khá»±ng
+			if (button.classList.contains('active')) {
+			
+			DeactiveCodePatch("freefireth",  0x4715560 , "20008052C0035FD6"); 
+			DeactiveCodePatch("freefireth",  0x45FB9D0 , "20008052C0035FD6"); 
+			DeactiveCodePatch("freefireth",  0x4715504 , "20008052C0035FD6"); 
+			
+			     button.classList.remove('active');
+			    button.textContent = 'Nháº£y Khá»±c: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+			    
+			    
+			ActiveCodePatch("freefireth",  0x4715560 , "20008052C0035FD6");	
+			    	ActiveCodePatch("freefireth",  0x45FB9D0 , "20008052C0035FD6");
+			    		ActiveCodePatch("freefireth",  0x4715504 , "20008052C0035FD6");		
+			    	button.classList.add('active');
+			    button.textContent = 'Nháº£y Khá»±c: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+			}
+			function hn7(button) { //ddoour sÃºng nhanh
+			 if (button.classList.contains('active')) {
+			DeactiveCodePatch("freefireth",  0x4A836E0 , "C0035FD6"); 	
+			        
+			    button.classList.remove('active');
+			    button.textContent = 'Gun Fast: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+			    
+			            
+			ActiveCodePatch("freefireth",  0x4A836E0 , "C0035FD6");
+			
+			
+			    button.classList.add('active');
+			    button.textContent = 'Gun Fast: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+			}
+			function fs17(input) { //chayj dÆ°á»i nuc
+			if (input.checked) {
+			ActiveCodePatch("freefireth",  0x4759880 , "20008052C0035FD6");
+			
+			    codeStatus = true;
+			} else {
+			    DeactiveCodePatch("freefieth",  0x4759880 , "20008052C0035FD6"); 	
+			
+			    codeStatus = false;
+			}
+			}
+			function fs18(input) { //xoas fog
+			if (input.checked) {
+			ActiveCodePatch("freefireth",  0x55DC51C , "00008052C0035FD6");
+			
+			
+			    codeStatus = true;
+			} else {
+			    DeactiveCodePatch("freefireth",  0x55DC51C , "00008052C0035FD6"); 	
+			   
+			
+			    codeStatus = false;
+			}
+			}
+			function fs19(input) { //no scope
+			if (input.checked) {
+			ActiveCodePatch("freefireth",  0x46DE054 , "00008052C0035FD6");
+			    codeStatus = true;
+			} else {
+			    DeactiveCodePatch("freefireth",  0x46DE054 , "00008052C0035FD6"); 	
+			    codeStatus = false;
+			}
+			}
+			function hn8(button) { // ko rung svope
+			if (button.classList.contains('active')) {
+			
+			DeactiveCodePatch("freefireth",  0x396D70C , "C0035FD6"); 
+			    button.classList.remove('active');
+			    button.textContent = 'ko Rung: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+					ActiveCodePatch("freefireth",  0x396D70C , "C0035FD6");
+			    	
+			    button.classList.add('active');
+			    button.textContent = 'Ko Rung: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+			}
+			function hn9(button) { // 2gun
+			 if (button.classList.contains('active')) {
+			
+			
+			DeactiveCodePatch("freefireth",  0x102354550 , "200080D2C0035FD6"); 
+			    button.classList.remove('active');
+			    button.textContent = 'Double Gun: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+					ActiveCodePatch("freefireth",  0x102354550 , "200080D2C0035FD6");
+			    	
+			    button.classList.add('active');
+			    button.textContent = 'Double Gun: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+			}
+			function hn10(button) { // chá»¯ v
+			if (button.classList.contains('active')) {
+			
+			DeactiveCodePatch("freefireth",  0x33801BC , "20008052C0035FD6"); 
+			    button.classList.remove('active');
+			    button.textContent = 'Chá»¯ V: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+					ActiveCodePatch("freefireth",  0x33801BC , "20008052C0035FD6");
+			    	
+			    button.classList.add('active');
+			    button.textContent = 'Chá»¯ V: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+			}
+			
+			function hn11(button) { //tele kill
+			if (button.classList.contains('active')) {
+			
+			DeactiveCodePatch("freefireth",  0x41C87EC , "C0035FD6"); 
+			button.classList.remove('active');
+			    button.textContent = 'Tele Kill: Off';
+			    
+			button.style.color = 'red'; // 
+			    codeStatus = false;
+			} else {
+			    
+			    
+			ActiveCodePatch("freefireth",  0x41C87EC , "C0035FD6");	
+			    button.classList.add('active');
+			    button.textContent = 'Tele Kill: On';
+			    
+			button.style.color = 'green'; // 
+			    codeStatus = true;
+			}
+                            }
+			
+                    // Funções placeholder para obter a posição do alvo mais próximo
+                    private func getNearestTargetPosition() -> CGPoint? {
+                        // Retorne a posição do alvo
+                        return CGPoint(x: 200, y: 150)
+                    }
+ 
+                    // Funções placeholder para ajustar a mira
+                    private func adjustAim(from source: CGPoint, to target: CGPoint) {
+                        // Ajuste do mira 
+                        print("Ajustando a mira...")
+                    }
+                }
+                */
+                // Código para chamar o AimlockExecutor (exemplo com WebView)
+                window.webkit.messageHandlers.aimlockExecutor.postMessage({
+                    method: 'execute'
+                });
+            } else if (modId === 'aimfov') {
+                // SIMULAÇÃO DO AimFovExecutor (código Swift)
+                /*
+                import Foundation
+ 
+                class AimFovExecutor {
+                    private var fovAngle: Float = 90.0
+ 
+                    func execute() {
+                        setFov(angle: fovAngle) // Definir o FOV
+                    }
+ 
+                    private func setFov(angle: Float) {
+                        // (Implemente aqui a lógica para definir o FOV)
+                        print("Definindo FOV para \(angle) graus.")
+                    }
+                }
+                */
+                // Código para chamar o AimFovExecutor (exemplo com WebView)
+                window.webkit.messageHandlers.aimfovExecutor.postMessage({
+                    method: 'execute'
+                });
+            }
+        }
+
+               function confirmAction(modId) {
+            hideDialog(modId + '-dialog');
+            startLoading(modId); // Start loading *after* confirmation
+        }
+ 
+        function cancelAction(modId) {
+            hideDialog(modId + '-dialog');
+        }
+ 
+        document.querySelectorAll('input[name="mod"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                selectedMod = this.dataset.mod;
+                let dialogId = this.dataset.dialog;
+                showDialog(dialogId);
+            });
+        });
+    </script>
+</body>
+ 
+</html>
